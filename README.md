@@ -1,7 +1,7 @@
 # linux_useful_command
 
 
-1. sudo find / -name "'*'aaaaa'*'"
+1. sudo find / -name "ctrl+8 aaaaa ctrl+8"
 
 It prints the files that contain the corresponding input
 
