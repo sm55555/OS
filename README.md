@@ -1,7 +1,7 @@
 # linux_useful_command
 
 
-1. sudo find / -name "*aaaaa*"
+1. sudo find / -name "'*'aaaaa'*'"
 
 It prints the files that contain the corresponding input
 
