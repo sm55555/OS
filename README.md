@@ -184,6 +184,10 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 * ip addr and ifconfig show the information about ip and another setting
 * The ifconfig command does not show the information set in Network Manager
 
+
+du
+sudo
+
 * * *
 
 
