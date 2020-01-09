@@ -21,8 +21,8 @@ udp        0      0 0.0.0.0:753             0.0.0.0:*                           
 udp        0      0 127.0.0.1:323           0.0.0.0:*                           -                   
 udp        0      0 0.0.0.0:68              0.0.0.0:*                           -                   
 udp        0      0 0.0.0.0:111             0.0.0.0:*                           -   
-
 ...
+
 ~~~
 
 netstat shows the communication status of the network interface installed on the host
@@ -59,11 +59,60 @@ You have to wirte "sudo" because linux find command is search from root director
 .			518400	IN	NS	E.ROOT-SERVERS.NET.
 .			518400	IN	NS	F.ROOT-SERVERS.NET.
 ;; Received 239 bytes from 10.0.0.2#53(10.0.0.2) in 0 ms
-....
+...
 
 ~~~
 
 dig shows the information (IP Address and domain) through the Name Server
+
+### nslookup
+
+~~~
+
+[ec2-user@ip-10-0-0-86 ~]$ nslookup naver.com
+Server:		10.0.0.2
+Address:	10.0.0.2#53
+
+Non-authoritative answer:
+Name:	naver.com
+Address: 210.89.160.88
+Name:	naver.com
+Address: 210.89.164.90
+Name:	naver.com
+Address: 125.209.222.141
+Name:	naver.com
+Address: 125.209.222.142
+
+[ec2-user@ip-10-0-0-86 ~]$ nslookup -type=ns naver.com
+Server:		10.0.0.2
+Address:	10.0.0.2#53
+
+Non-authoritative answer:
+naver.com	nameserver = ns1.naver.com.
+naver.com	nameserver = ns2.naver.com.
+
+Authoritative answers can be found from:
+
+[ec2-user@ip-10-0-0-86 ~]$ nslookup naver.com ns1.naver.com
+Server:		ns1.naver.com
+Address:	125.209.248.6#53
+
+Name:	naver.com
+Address: 210.89.160.88
+Name:	naver.com
+Address: 125.209.222.141
+Name:	naver.com
+Address: 210.89.164.90
+Name:	naver.com
+Address: 125.209.222.142
+
+~~~
+
+nslookup shows the information(IP Address and domain) through the Name Server
+-> nslookup -type=ns [domain]
+shows DNS name
+-> nslookup [domain] [DNS name]
+shows the information (IP Address and domain) as an administrator
 
 * * *
 
