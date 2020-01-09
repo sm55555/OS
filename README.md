@@ -141,6 +141,49 @@ route is show information about default gateway
 
 * In Windows, the ipconfig command shows default gateway, But Linux ifconfig does not show default gateway
 
+### ip addr && ifconfig
+
+~~~
+
+[ec2-user@ip-10-0-0-86 ~]$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 02:ca:05:a7:e5:58 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.0.86/24 brd 10.0.0.255 scope global dynamic eth0
+       valid_lft 2403sec preferred_lft 2403sec
+    inet6 fe80::ca:5ff:fea7:e558/64 scope link 
+       valid_lft forever preferred_lft forever
+       
+       
+[ec2-user@ip-10-0-0-86 ~]$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 10.0.0.86  netmask 255.255.255.0  broadcast 10.0.0.255
+        inet6 fe80::ca:5ff:fea7:e558  prefixlen 64  scopeid 0x20<link>
+        ether 02:ca:05:a7:e5:58  txqueuelen 1000  (Ethernet)
+        RX packets 34300  bytes 39989237 (38.1 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6771  bytes 780359 (762.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 36  bytes 1740 (1.6 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 36  bytes 1740 (1.6 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+~~~
+
+* ip addr and ifconfig show the information about ip and another setting
+* The ifconfig command does not show the information set in Network Manager
+
 * * *
 
 
