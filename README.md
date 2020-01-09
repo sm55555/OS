@@ -23,7 +23,7 @@ udp        0      0 0.0.0.0:111             0.0.0.0:*                           
 ...
 ~~~
 
-netstat shows the communication status of the networkd interface installed on the host
+netstat shows the communication status of the network interface installed on the host
 
 ### find 
 
