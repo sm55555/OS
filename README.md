@@ -2,7 +2,7 @@
 
 
 ~~~
-sudo find / -name "* aaaaa *"
+sudo find / -name "*aaaaa*"
 ~~~
 It prints the files that contain the corresponding input
 
