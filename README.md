@@ -42,7 +42,7 @@ You have to wirte "sudo" because linux find command is search from root director
 
 ~~~
 
-[ec2-user@ip-10-0-0-86 ~]$ dig nave.com +trace
+[ec2-user@ip-10-0-0-86 ~]$ dig naver.com +trace
 ; <<>> DiG 9.11.4-P2-RedHat-9.11.4-9.P2.amzn2.0.2 <<>> nave.com +trace
 ;; global options: +cmd
 .			518400	IN	NS	G.ROOT-SERVERS.NET.
