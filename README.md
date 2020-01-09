@@ -63,7 +63,7 @@ You have to wirte "sudo" because linux find command is search from root director
 
 ~~~
 
-dig shows the information (IP address and domain) by requesting host information on the name server
+dig shows the information (IP Address and domain) through the Name Server
 
 * * *
 
