@@ -1,4 +1,4 @@
-# linux_useful_command
+# Useful_command
 
 
 ### sudo find / -name "ctrl+8 aaaaa ctrl+8"
