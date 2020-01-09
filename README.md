@@ -148,4 +148,6 @@ route is show information about default gateway
 
 ~~~
 
+ncpa.cpl
+
 ~~~
