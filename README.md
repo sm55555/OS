@@ -118,6 +118,28 @@ shows DNS name
 
 shows the information (IP Address and domain) as an administrator
 
+### route
+
+~~~
+
+[ec2-user@ip-10-0-0-86 ~]$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         ip-10-0-0-1.ap- 0.0.0.0         UG    0      0        0 eth0
+10.0.0.0        0.0.0.0         255.255.255.0   U     0      0        0 eth0
+instance-data.a 0.0.0.0         255.255.255.255 UH    0      0        0 eth0
+[ec2-user@ip-10-0-0-86 ~]$ netstat -r
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+default         ip-10-0-0-1.ap- 0.0.0.0         UG        0 0          0 eth0
+10.0.0.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
+instance-data.a 0.0.0.0         255.255.255.255 UH        0 0          0 eth0
+
+~~~
+
+route is show information about default gateway
+
+* In Windows, the ipconfig command shows default gateway, But Linux ifconfig does not show default gateway
 
 * * *
 
