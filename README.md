@@ -6,6 +6,7 @@ enviroment : amazon linux2 (centOS)
 
 
 ### netstat
+
 ~~~
 [ec2-user@ip-10-0-0-86 ~]$ netstat -anp
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
@@ -22,7 +23,9 @@ udp        0      0 0.0.0.0:111             0.0.0.0:*                           
 ...
 ~~~
 
-netstat show your local address and foreign address including port and Status, PID 
+netstat shows the communication status of the networkd interface installed on the host
+
+### find 
 
 ~~~
 sudo find / -name "*aaaaa*"
