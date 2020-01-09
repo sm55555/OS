@@ -185,8 +185,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 * The ifconfig command does not show the information set in Network Manager
 
 
-du
-sudo
+du <--- about disk
 
 * * *
 
