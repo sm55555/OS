@@ -110,11 +110,11 @@ Address: 125.209.222.142
 
 nslookup shows the information(IP Address and domain) through the Name Server
 
--> nslookup -type=ns [domain]
+* nslookup -type=ns [domain]
 
 shows DNS name
 
--> nslookup [domain] [DNS name]
+* nslookup [domain] [DNS name]
 
 shows the information (IP Address and domain) as an administrator
 
