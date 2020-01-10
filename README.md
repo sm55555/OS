@@ -194,6 +194,6 @@ du <--- about disk
 
 ~~~
 
-ncpa.cpl
+ncpa.cpl : Network Mangager
 
 ~~~
