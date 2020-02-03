@@ -196,4 +196,5 @@ du <--- about disk
 
 ncpa.cpl : Network Mangager
 
+윈도우도 추가핮?
 ~~~
