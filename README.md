@@ -196,5 +196,8 @@ du <--- about disk
 
 ncpa.cpl : Network Mangager
 
-윈도우도 추가핮?
+compmgmt.msc : computer setting
+
+mstsc : remote connection
+
 ~~~
