@@ -200,4 +200,7 @@ compmgmt.msc : computer setting
 
 mstsc : remote connection
 
+ipconfig : ip information
+
+netstat -an : same Linux
 ~~~
