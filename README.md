@@ -202,5 +202,5 @@ mstsc : remote connection
 
 ipconfig : ip information
 
-netstat -an : same Linux
+netstat -an : same Linux -> netstat -an | findstr 3389 -> check state 3389 port
 ~~~
