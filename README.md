@@ -199,7 +199,26 @@ du <--- about disk
 
 ### last
 
-chekc the log 
+```
+
+[ec2-user@ip-10-0-0-86 ~]$ last reboot
+reboot   system boot  ------------ Tue Jan  7 13:24 - 14:34 (41+01:10)  
+reboot   system boot  ------------ Tue Jan  7 13:16 - 14:34 (41+01:18)  
+.....
+
+```
+
+'last' command showsa the overall system booting log also you can used in following ways.
+
+
+```
+
+[ec2-user@ip-10-0-0-86 ~]$ last reboot | head -1
+reboot   system boot  ------------ Tue Jan  7 13:24 - 14:38 (41+01:13)
+
+```
+
+'(41+01:13)' means you turned on the computer for 41 days, 1 hours, 13 minutes  
 
 * * *
 
