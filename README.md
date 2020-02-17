@@ -187,7 +187,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 du <--- about disk
 
-### last reboot | head -1
+### last
 
 chekc the log 
 
