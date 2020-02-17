@@ -118,6 +118,16 @@ shows DNS name
 
 shows the information (IP Address and domain) as an administrator
 
+~~~
+
+[ec2-user@ip-10-0-0-86 ~]$ nslookup
+>server [DNS]
+>[IP or CNAME]
+
+~~~
+
+The above code means that requesting by [DNS]
+
 ### route
 
 ~~~
@@ -208,6 +218,6 @@ ipconfig : ip information
 
 netstat -an : same Linux -> netstat -an | findstr 3389 -> check state 3389 port
 
-stysteminfo : 
+stysteminfo : This command shows the overall system information including Hostname, OS, System.....
 
 ~~~
