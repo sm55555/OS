@@ -187,6 +187,10 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 du <--- about disk
 
+### last reboot | head -1
+
+chekc the log 
+
 * * *
 
 
@@ -203,4 +207,7 @@ mstsc : remote connection
 ipconfig : ip information
 
 netstat -an : same Linux -> netstat -an | findstr 3389 -> check state 3389 port
+
+stysteminfo : 
+
 ~~~
