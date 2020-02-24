@@ -241,5 +241,7 @@ stysteminfo : This command shows the overall system information including Hostna
 
 dcdiag : This command checks the health of Domain Controller
 
+repadmin /replsum : This command prints the status of AD replication
+
 
 ~~~
