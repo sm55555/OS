@@ -239,4 +239,7 @@ netstat -an : same Linux -> netstat -an | findstr 3389 -> check state 3389 port
 
 stysteminfo : This command shows the overall system information including Hostname, OS, System.....
 
+dcdiag : This command checks the health of Domain Controller
+
+
 ~~~
