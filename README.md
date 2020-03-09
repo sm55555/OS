@@ -27,6 +27,16 @@ udp        0      0 0.0.0.0:111             0.0.0.0:*                           
 
 netstat shows the communication status of the network interface installed on the host
 
+### traceroute
+
+~~~
+
+next
+
+~~~
+
+This command is TCP/IP protocol debugging tool to track routing routes to destinations
+
 ### find 
 
 ~~~
@@ -243,5 +253,6 @@ dcdiag : This command checks the health of Domain Controller
 
 repadmin /replsum : This command prints the status of AD replication
 
+tracert : This command is TCP/IP protocol debugging tool used to track routing routes to destinations (for Window)
 
 ~~~
