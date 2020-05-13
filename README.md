@@ -232,6 +232,16 @@ reboot   system boot  ------------ Tue Jan  7 13:24 - 14:38 (41+01:13)
 
 * * *
 
+### df
+
+df : report file system disk space usage
+
+df -T -> print file system type
+
+df -h - > 'h'means human readable print sizes in human readable format(e.g., 1K 234M 2G)
+
+df -H - > likewise, but use powers of 1000 not 1024
+
 
 ## Window
 
