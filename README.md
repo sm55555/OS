@@ -37,7 +37,7 @@ next
 
 This command is TCP/IP protocol debugging tool to track routing routes to destinations
 
-### find 
+### linux find file 
 
 ~~~
 
@@ -47,6 +47,14 @@ sudo find / -name "*aaaaa*"
 It prints the files that contain the corresponding input
 
 You have to wirte "sudo" because linux find command is search from root directory
+
+## linux find a text in file
+
+```
+
+grep -n [원하는 문자열] [fileAddress]
+
+```
 
 ### dig
 
