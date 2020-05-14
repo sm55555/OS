@@ -50,11 +50,22 @@ You have to wirte "sudo" because linux find command is search from root director
 
 ## linux find a text in file
 
-```
+~~~
+
+[ec2-user@ip-10-0-0-86 ~]$ grep -n Permit /etc/ssh/sshd_config
+38:PermitRootLogin no
+64:#PermitEmptyPasswords no
+90:# the setting of "PermitRootLogin without-password".
+104:#PermitTTY yes
+110:#PermitUserEnvironment no
+118:#PermitTunnel no
+138:#	PermitTTY no
+
+~~~
 
 grep -n [원하는 문자열] [fileAddress]
 
-```
+
 
 ### dig
 
