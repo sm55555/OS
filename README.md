@@ -261,6 +261,21 @@ df -h - > 'h'means human readable print sizes in human readable format(e.g., 1K 
 
 df -H - > likewise, but use powers of 1000 not 1024
 
+### firewall Setting
+
+in CentOS 7
+
+netstat -an | grep [PORT]
+
+change root
+
+systemctl start firewalld
+
+firewall-cmd --zone=public --permanent --add-port=[PORT]/tcp
+
+firewall-cmd --reload
+
+firewall-cmd --zone=public --list-all
 
 ## Window
 
