@@ -277,6 +277,23 @@ firewall-cmd --reload
 
 firewall-cmd --zone=public --list-all
 
+### How to add sftp port
+
+```
+
+[ec2-user@ip-10-0-0-86 ~]$ vi /etc/ssh/sshd_config
+[ec2-user@ip-10-0-0-86 ~]$ service sshd restart
+Redirecting to /bin/systemctl restart sshd.service
+[ec2-user@ip-10-0-0-86 ~]$ netstat -tnlp | grep sshd
+tcp        0      0 0.0.0.0:4081            0.0.0.0:*               LISTEN      44701/sshd          
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      44701/sshd          
+tcp6       0      0 :::4081                 :::*                    LISTEN      44701/sshd          
+tcp6       0      0 :::22                   :::*                    LISTEN      44701/sshd
+
+```
+
+modify - #Port 22 and add port that you want
+
 ## Window
 
 ~~~
