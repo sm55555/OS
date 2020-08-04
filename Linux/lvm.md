@@ -34,8 +34,8 @@ mount /dev/myVG/myLG2 /lvm2
 
 vi /etc/fstab
 
+/dev/myVG/myLG2                    /lvm2        ext4    defaults          0   0
 /dev/myVG/myLG1                    /lvm1        ext4    defaults          0   0
-/dev/mapper/vg_data-lv_logs                   /logs       ext4    defaults          0   0
 
 ```
 
