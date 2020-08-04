@@ -1,3 +1,6 @@
+## lvm create
+
+```
 /dev/xvdf 
 3GB
 /dev/xvdg
@@ -26,3 +29,5 @@ vi /etc/fstab
 
 /dev/myVG/myLG1                    /lvm1        ext4    defaults          0   0
 /dev/mapper/vg_data-lv_logs                   /logs       ext4    defaults          0   0
+
+```
