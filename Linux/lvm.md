@@ -34,20 +34,20 @@ vi /etc/fstab
 
 축소 -> 백업 반드시 필요 
 
-1. 마운트 해체 
+마운트 방법 해체 부터
 
 umount /lvm1
 
 e2fsck -f /dev/myVG/myLG1
-resize2fs /dev/myVG/myLG1 1G
-lvreduce -L -3G /dev/myVG/myLG1
+resize2fs /dev/myVG/myLG1 1G      <- 이건 현재 4GB에서 1G로 변경할때
+lvreduce -L -3G /dev/myVG/myLG1   <- 4-3GB해야 1GB 됨
 
 y 누름
 
 mount /dev/myVG/myLG1 /lvm1
 df -h
 
-증가
+증가 방법
 
 lvextend -L4G /dev/myVG/myLG1
 resize2fs /dev/myVG/myLG1 
