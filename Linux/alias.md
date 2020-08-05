@@ -8,7 +8,7 @@
 alias vi='vim' 
 ```
 
-### after modify
+#### after modify
 
 ```
 [root@test_d ~]# source .bashrc
