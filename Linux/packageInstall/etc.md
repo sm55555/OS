@@ -62,6 +62,3 @@ $ sudo service jenkins start
 5. EC2에서 8080 포트 열고 http://aws-ec2-domain:8080으로 접속
 
 7. 사이트에서 가르키는 경로에서 비밀번호를 확인 후, 플러그인(suggest)설치
-
-
-
