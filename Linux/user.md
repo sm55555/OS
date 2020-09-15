@@ -16,3 +16,7 @@ userdel -r [username]
 
 
 ```
+
+# /etc/skel
+
+신규 사용자 생성시 /etc/ske 파일을 복사하여 만들어진다.
