@@ -20,3 +20,20 @@ userdel -r [username]
 # /etc/skel
 
 신규 사용자 생성시 /etc/ske 파일을 복사하여 만들어진다.
+
+
+# 옵션 없이 사용자를 생성했을 때 설정
+
+```
+
+[root@test_d skel]# useradd -D
+GROUP=100
+HOME=/home
+INACTIVE=-1
+EXPIRE=
+SHELL=/bin/bash
+SKEL=/etc/skel
+CREATE_MAIL_SPOOL=yes
+
+```
+
