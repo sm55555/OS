@@ -18,19 +18,23 @@ root
 
 
 
-#### last : /var/log/wtmp 파일을 참고하여 로그인했던 정보를 출력해주는 명령어
+#### last : /var/log/wtmp 파일을 참고하여 로그인했던 정보를 출력해주는 명령어 및 시스템 부팅 기록 확인
 
 ```
 [user02@test_d log]$ last
-ec2-user pts/1        211.206.114.80   Tue Sep 15 14:50   still logged in   
-ec2-user pts/0        211.206.114.80   Mon Sep 14 17:10   still logged in   
-ec2-user pts/0        211.206.114.80   Mon Sep 14 09:52 - 12:54  (03:01)    
-ec2-user pts/0        211.206.114.80   Fri Sep 11 17:28 - 17:35  (00:07)    
-ec2-user pts/0        211.206.114.80   Tue Sep  8 15:23 - 15:41 (2+00:17)   
-ec2-user pts/1        211.206.114.80   Wed Sep  2 15:49 - 10:17  (18:28)    
-ec2-user pts/0        211.206.114.80   Wed Sep  2 09:17 - 10:17 (1+01:00)   
-ec2-user pts/0        211.206.114.80   Mon Aug 24 08:35 - 15:07  (06:32)    
-ec2-user pts/0        211.206.114.80   Fri Aug 21 16:37 - 08:24 (2+15:46)   
 ec2-user pts/1        211.206.114.80   Fri Aug 21 15:36 - 15:53  (00:17)    
+ec2-user pts/0        211.206.114.80   Fri Aug 21 13:16 - 15:53  (02:36)    
+ec2-user pts/0        211.206.114.80   Thu Aug 20 12:52 - 09:37  (20:44)    
+reboot   system boot  4.14.186-146.268 Thu Aug 20 12:41 - 14:54 (26+02:13)  
+ec2-user pts/0        211.206.114.80   Thu Aug 20 08:39 - 09:26  (00:47)    
+reboot   system boot  4.14.186-146.268 Wed Aug 19 15:58 - 10:56  (18:57)    
+ec2-user pts/0        211.206.114.80   Wed Aug 19 15:21 - 15:47  (00:26)    
+reboot   system boot  4.14.186-146.268 Wed Aug 19 15:20 - 10:56  (19:36)    
+ec2-user pts/0        211.206.114.80   Wed Aug 19 11:00 - 15:12  (04:11)    
+ec2-user pts/0        211.206.114.80   Tue Aug 18 16:20 - 17:36  (01:16)    
+ec2-user pts/0        211.206.114.80   Tue Aug 11 13:40 - 17:00  (03:20)    
+ec2-user pts/0        211.206.114.80   Mon Aug 10 14:38 - 11:07  (20:28)    
+reboot   system boot  4.14.186-146.268 Mon Aug 10 14:35 - 15:12 (9+00:36)   
+
 
 ```
