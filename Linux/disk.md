@@ -59,7 +59,7 @@ Device     Boot  Start    End Sectors  Size Id Type
 /dev/xvdf2      206848 616447  409600  200M 83 Linux
 /dev/xvdf3      616448 923647  307200  150M 83 Linux
 [root@test_d pkginstall]# fdisk /dev/xvdf
-``
+```
 
 #### Primary Partion은 4개만 사용 가능
 
