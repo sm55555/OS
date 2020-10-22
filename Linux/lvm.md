@@ -78,3 +78,5 @@ df -Th
 pvremove /dev/xvdf1
 pvremove /dev/xvdg1
 ```
+
+### 할당하는게 2GB 이상 이면 다르게 해야함
