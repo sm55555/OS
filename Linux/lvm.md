@@ -80,3 +80,27 @@ pvremove /dev/xvdg1
 ```
 
 ### 할당하는게 2GB 이상 이면 다르게 해야함
+
+```
+
+- 2TB이상에서는 GPT볼륨으로 구성을 해야 하는데 fdisk 로는 파티션을 잡을 수 없다.. 
+그래서 parted 로 설정을 해야함. 
+
+# fdisk -l 로 현재 장치명 확인 
+/dev/sdb  /dev/sdc  다른 디스크가 없다면 이렇게 보일 것 임.
+# parted /dev/sdb
+<parted> mklabel gpt
+<parted> unit gb or unit tb  : 사용 단위 지정
+<parted> mkpart primary 0 100% : 용량을 4096GB로 설정해도 됨
+<parted> set 1 lvm on : lvm으로 설정을 할 것 이기 때문에
+<parted> print : 잘 잡혔는지 확인
+<parted> q       : 빠져 나옴
+# parted /dev/sdc : 이것도 동일하게 설정
+# fdisk -l로 다시 확인 
+/dev/sdb1 /dev/sdc1 으로 파티션이 설정된 것이 보임
+
+
+-> 그 후 LVM 생성
+
+```
+
