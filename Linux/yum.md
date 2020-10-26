@@ -1,6 +1,6 @@
 ### how to install speccifci package
 
-first remove all relative package
+1. first remove all relative package
 
 ```
 
@@ -29,7 +29,47 @@ firefox.x86_64                                                              38.0
 
 # yum install [package-name]-[version].[architecture]   -> ex) yum install httpd-2.4.43-1.amzn2
 
+```
+
+source url : https://www.thegeekdiary.com/centos-rhel-how-to-install-a-specific-version-of-rpm-package-using-yum/
+
+
+2. checked Available Packages Version
+
+```
+
+[root@test_d ~]# yum info httpd
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+202 packages excluded due to repository priority protections
+Installed Packages
+Name        : httpd
+Arch        : x86_64
+Version     : 2.4.43
+Release     : 1.amzn2
+Size        : 4.0 M
+Repo        : installed
+From repo   : amzn2-core
+Summary     : Apache HTTP Server
+URL         : https://httpd.apache.org/
+License     : ASL 2.0
+Description : The Apache HTTP Server is a powerful, efficient, and extensible
+            : web server.
+
+Available Packages
+Name        : httpd
+Arch        : x86_64
+Version     : 2.4.46
+Release     : 1.amzn2
+Size        : 1.3 M
+Repo        : amzn2-core/2/x86_64
+Summary     : Apache HTTP Server
+URL         : https://httpd.apache.org/
+License     : ASL 2.0
+Description : The Apache HTTP Server is a powerful, efficient, and extensible
+            : web server.
 
 
 
 ```
+
+source url : https://okcn.tistory.com/356
