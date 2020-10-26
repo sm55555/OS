@@ -1,13 +1,11 @@
-### how to install speccifci package
+# how to install speccifci package
 
-1. first remove all relative package
+### 1. first remove all relative package
 
 ```
+[root@test_d ~]# yum --showduplicate list [package_name]
 
-# yum --showduplicate list [package_name]
-
-
-# yum --showduplicate list firefox
+[root@test_d ~]# yum --showduplicate list firefox
 Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
 This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
 Repodata is over 2 weeks old. Install yum-cron? Or run: yum makecache fast
@@ -27,14 +25,14 @@ firefox.x86_64                                                              38.0
 firefox.x86_64                                                              38.0.1-1.el7_1     
 
 
-# yum install [package-name]-[version].[architecture]   -> ex) yum install httpd-2.4.43-1.amzn2
+[root@test_d ~]# yum install [package-name]-[version].[architecture]   -> ex) yum install httpd-2.4.43-1.amzn2
 
 ```
 
 source url : https://www.thegeekdiary.com/centos-rhel-how-to-install-a-specific-version-of-rpm-package-using-yum/
 
 
-2. checked Available Packages Version
+### 2. checked Available Packages Version
 
 ```
 
@@ -70,6 +68,14 @@ Description : The Apache HTTP Server is a powerful, efficient, and extensible
 
 
 
+```
+
+### if you can't see Available Packages~~~
+
+```
+[root@test_d ~]# yum install -y epel-release
+[root@test_d ~]# cd /etc/yum.repos.d && wget https://repo.codeit.guru/codeit.el`rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release)`.repo
+[root@test_d ~]# yum info httpd
 ```
 
 source url : https://okcn.tistory.com/356
