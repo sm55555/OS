@@ -6,8 +6,8 @@
 
 enabled, permissive, disabled
 
-enabled : 활성, 차단 가능
-permissive : 켜져는 있지만 안막고, audit에 로그만 남긴다.
+enabled : 활성, 위반된 모든 작업 차단
+permissive : 켜져는 있지만 위반된 사항에 대해만 경고하고 audit에 로그만 남긴다.
 disabled : 비활성화
 
 
