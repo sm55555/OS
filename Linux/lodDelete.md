@@ -15,7 +15,13 @@ find ./*.log.* -ctime +30 -exec rm -f {} \;
 
 ### 특정 로그를 지우고 삭제 전과 동일한 용량을 보일때
  
+프로세스에서 삭제된 파일들을 사용하는 경우가 있다.
+
+``` 
 lsof | grep deleted
+```
+
+명령어를 동해서 현재 사용하고 있는 프로세스를 확인한다.
 
 <img src="https://user-images.githubusercontent.com/38831314/111253864-39818b80-8657-11eb-83d6-6ef63711c8be.png">
 
