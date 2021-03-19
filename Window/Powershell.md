@@ -15,3 +15,9 @@
 ### Number of Enabled User Accounts in Sepcific OU
 
 (get-aduser -filter * -SearchBase “OU=Division,DC=test,DC=com” |where {$_.enabled -eq “True”}).count
+
+### Account information
+
+Get-ADUser –Identity “delmaster” –Properties *
+
+
