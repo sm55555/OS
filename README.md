@@ -2,7 +2,7 @@
 
 ## Linux
 
-enviroment : amazon linux2 (centOS)
+Enviroment : amazon linux2 (centOS)
 
 
 ### netstat
