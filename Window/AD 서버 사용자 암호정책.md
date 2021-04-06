@@ -14,5 +14,9 @@ adsiedit.msc
 
 ### 하단 컴퓨터 부분 도메인 명 입력 ex ) test.net
 
-CN=System -> CN=Password Settings Container -> 그룹 속성 확인 msDS- 부분을 확인하자 (자세한 것은 구글링,,,)
+CN=System -> CN=Password Settings Container -> 그룹 속성 확인 msDS- 부분을 확인하자
+
+#### 특성 관련 공식 URL
+
+https://docs.microsoft.com/ko-kr/windows/win32/adschema/a-msds-minimumpasswordlength
 
