@@ -1,6 +1,6 @@
 # 이벤트 뷰어 로그 필터링
 
-### xml을 사용하는 로그 필터링
+## XML을 사용하는 로그 필터링
 
 ![image](https://user-images.githubusercontent.com/38831314/114356053-20fb8700-9bab-11eb-8542-ee7ba2faedab.png)
 
@@ -18,7 +18,7 @@
 </QueryList>
 ```
 
-System의 EventID 4624를 검색하고 EventData의 DataName의 TargetDomainName을 검색하고 Date가 test인 것을 찾아내는 XML이다.
+System의 EventID 4624를 검색하고 EventData의 DataName의 TargetDomainName을 검색하고 Date가 test인 것을 찾아내는 쿼리다.
 
 
 [참고 URL]
