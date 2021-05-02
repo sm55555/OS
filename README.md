@@ -4,6 +4,16 @@
 
 Enviroment : Amazon linux2
 
+## Version Check
+
+~~~
+
+[root@test ~]# cat /etc/issue
+Enterprise Linux Enterprise Linux Server release 5.5 (Carthage)
+Kernel \r on an \m
+
+~~~
+
 
 ### netstat
 
