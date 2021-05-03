@@ -8,9 +8,18 @@ Enviroment : Amazon linux2
 
 ~~~
 
-[root@test ~]# cat /etc/issue
-Enterprise Linux Enterprise Linux Server release 5.5 (Carthage)
-Kernel \r on an \m
+[root@test ~]# cat /etc/*release*
+NAME="Amazon Linux"
+VERSION="2"
+ID="amzn"
+ID_LIKE="centos rhel fedora"
+VERSION_ID="2"
+PRETTY_NAME="Amazon Linux 2"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2"
+HOME_URL="https://amazonlinux.com/"
+Amazon Linux release 2 (Karoo)
+cpe:2.3:o:amazon:amazon_linux:2
 
 ~~~
 
