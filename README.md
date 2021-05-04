@@ -336,3 +336,7 @@ repadmin /replsum : This command prints the status of AD replication
 tracert : This command is TCP/IP protocol debugging tool used to track routing routes to destinations (for Window)
 
 ~~~
+
+
+
+su - appadmin -c /data/gvia/gvia_restart.sh
