@@ -18,4 +18,9 @@
 내 컴퓨터 -> 고급 시스템 설정 -> 시작 및 복구 설정
 
 
+![image](https://user-images.githubusercontent.com/38831314/120136329-0ccc2180-c20d-11eb-92e5-0f941c682733.png)
+
+
+
+
 ### windbg 주요 명령어
