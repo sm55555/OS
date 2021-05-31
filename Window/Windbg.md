@@ -11,6 +11,10 @@
 
 2. Open Crash Dum -> DMP파일
 
+![image](https://user-images.githubusercontent.com/38831314/120137215-c7a8ef00-c20e-11eb-9f94-7b7a3f015458.png)
+
+3. !anaylze -v 명령어 입력
+
 #### DMP 파일 확인하는 법
 
 <img src ="https://user-images.githubusercontent.com/38831314/95414510-05e45c00-0969-11eb-8e4c-e3c8d65c313b.png">
