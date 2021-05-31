@@ -13,7 +13,7 @@
 
 ![image](https://user-images.githubusercontent.com/38831314/120137215-c7a8ef00-c20e-11eb-9f94-7b7a3f015458.png)
 
-3. !anaylze -v 명령어 입력
+3. !anaylze -v 명령어 입력 -> MODULE NAME을 통해서 파악 진행
 
 #### DMP 파일 확인하는 법
 
