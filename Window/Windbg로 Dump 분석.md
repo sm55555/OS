@@ -21,6 +21,8 @@
 
 ![image](https://user-images.githubusercontent.com/38831314/125557327-a8d6b2e5-b788-4cec-b96b-69c2e8314104.png)
 
+#### 덤프 파일 위치인 %SystemRoot& 는 C 드라이브 Windows 폴더를 지칭
+
 
 <img src ="https://user-images.githubusercontent.com/38831314/95414510-05e45c00-0969-11eb-8e4c-e3c8d65c313b.png">
 
