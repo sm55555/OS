@@ -17,6 +17,11 @@
 
 #### DMP 파일 확인하는 법
 
+윈도우 10은 -> 정보 -> 고급 시스템 설정 클릭
+
+![image](https://user-images.githubusercontent.com/38831314/125557327-a8d6b2e5-b788-4cec-b96b-69c2e8314104.png)
+
+
 <img src ="https://user-images.githubusercontent.com/38831314/95414510-05e45c00-0969-11eb-8e4c-e3c8d65c313b.png">
 
 내 컴퓨터 -> 고급 시스템 설정 -> 시작 및 복구 설정
