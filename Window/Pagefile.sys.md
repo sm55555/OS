@@ -9,7 +9,7 @@ Pagefile.sys란 리눅스의 swap 메모리 처럼 메모리가 부족 시 하�
 
 1. 내 컴퓨터 -> 고급 시스템 설정
 
-![image](https://user-images.githubusercontent.com/38831314/125555306-7b36c4d0-3234-472b-a233-1ec27db66be7.png{: width="100" height="100"})
+![image]{: width="100" height="100"}(https://user-images.githubusercontent.com/38831314/125555306-7b36c4d0-3234-472b-a233-1ec27db66be7.png)
 
 2. 고급 -> 설정
 
