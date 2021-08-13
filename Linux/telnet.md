@@ -25,3 +25,12 @@ Trying 192.168.10.21... 딜레이 계속됨
 telnet: connect to address 192.168.10.21: Connection timed out
 telnet: Unable to connect to remote host: Connection timed out
 ```
+
+### !! 타겟 위치에 실행되고 있는 프로세스들을 확인해보자
+
+```cmd
+[root@192.168.10.20]$ ps -ef | grep 22
+root      2292     2  0 May26 ?        00:00:00 [ena]
+root      2296     1  0 May26 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+root      3136     1  0 May26 ttyS0    00:00:00 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
+```
