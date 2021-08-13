@@ -26,7 +26,7 @@ telnet: connect to address 192.168.10.21: Connection timed out
 telnet: Unable to connect to remote host: Connection timed out
 ```
 
-### !! 타겟 위치에 실행되고 있는 프로세스들을 확인해보자
+### 타겟 위치에 실행되고 있는 프로세스들을 확인해보자
 
 ```cmd
 [root@192.168.10.20]$ ps -ef | grep 22
