@@ -1,0 +1,114 @@
+사용자, 그룹
+- /etc/passwd
+- /etc/group
+- /etc/shadow
+
+
+[계정생성]
+useradd -m -d /data/cgkim -s /bin/bash -u 1001 -g se cgkim 
+
+[프로파일]
+시스템 전체 프로파일 (/etc/profile)
+사용자 개인 프로파일 (사용자홈/.bash_profile)
+
+[계정 관리]
+usermod -g root cgkim (cgkim의 그룹을 root로 변경)
+usermod -G root cgkim (cgkim의 기존 그룹을 유지하되, root 그룹에도 속함)
+
+[sudo 권한 부여]
+/etc/sudoers.d/90-cloud-init-users 에 사용자 추가
+
+[비밀번호 복잡성 관리]
+/etc/security/pwquality.conf
+/etc/pam.d/system-auth, password-auth
+
+[비밀번호 사용 기간 관리]
+/etc/login.defs
+
+[파일 권한 관리]
+- chmod (파일 읽기, 쓰기, 실행 권한 변경 : chmod 600 /etc/hosts)
+- chown (소유자, 그룹 변경 : chown cgkim:se /test, chown -R 옵션을 주면 하위 파일들 모두 변경 됨)
+- umask (보통 /etc/profile에 설정함, umask 027일 시, 파일 생성 시 750으로 만들어짐)
+
+[파일 생성, 삭제, 이동, 관리]
+- mkdir (폴더 생성, mkdir test)
+- touch (파일 생성, touch 1)
+- echo (파일 생성, 파일 내 텍스트 덮어쓰기, echo 1 > test.log, echo 2 >> test.log)
+- mv (파일 이름변경/옮기기 mv test.log /root/test.log)
+- cp (파일 복사, cp -rp 할 경우 파일/디렉토리가 가진 속성 그대로 복사됨)
+- rm (파일 지우기, -r 옵션은 디렉토리 삭제, -f 옵션은 삭제 할건지 물어보지 않고 그냥 삭제, 보통 rm -rf 로 많이 지움)
+
+[파일 보기]
+- ls (ls -artl 세트로 씀) 
+- vi (파일 보고, 수정)
+- cat (파일 내용 출력하는건데, grep 이나 more 등등 혼합하여 씀 cat /etc/passwd | grep -i root | more)
+- more (파일 페이지로 나뉘어서 보여줌, cat 등과 혼합하여 사용)
+- grep (문자열 찾는 명령어, -i 옵션을 주면 대소문자 구분 없이 검색됨)
+- head (특정 로그의 앞내용을 보여줌, head -n 5 server.log)
+- tail (특정 로그의 뒷내용을 보여줌, tail -f 옵션을 사용하면 신규 출력되는 문자열을 계속 보여줌, grep 과 혼합하여 자주 사용)
+
+[용량 모니터링]
+- df (df -h 로 용량 리스트 확인)
+- du (du -sh ./* 로 하위 파일들 용량 봄)
+
+[파일시스템]
+- lvm (디스크 확장/축소가 쉬운 파일시스템)
+- fstab (부팅 시 마운트 될 디스크 정의, nofail 옵션을 쓰면 구성정보가 잘못되어도 부팅 가능)
+ 
+[OS 로그]
+- /var/log 이하 (meesages, secure 위주로 봄)
+
+프로세스 관리
+- ps (프로세스 사용자, PID, 기동시간, 프로세스 정보 출력 : ps -ef)
+- lsof (특정 파일을 쓰고 있는 프로세스 확인)
+
+네트워크 관리
+- netstat (netstat -anp 하면 포트 사용중인 프로세스까지 출력)
+
+[시작 프로그램]
+- systemctl list-unit-files
+- chkconfig
+- /etc/rc.d/rc.local
+
+[OS 방화벽]
+- iptables
+
+[서비스 관리]
+- service 서비스명 start, service 서비스명 stop, service 서비스명 status
+- systemctl start 서비스명, systemctl stop 서비스명, systemctl status 서비스명
+
+[yum]
+- yum repository (/etc/yum.respos.d/*.repo 레포지터리 정보)
+
+[패키지 설치]
+- yum install (yum install -y httpd.x86_64)
+- rpm -ivh, -uvh (rpm -ivh nmap-7.80-1.x86_64.rpm)
+
+[패키지 업데이트&원복]
+- yum clean (레포지터리 정보 초기화)
+- yum update (yum update kernel.x86_64, yum update 만 하면 전체 패키지 업데이트)
+- yum history (yum 수행 내역 확인)
+- yum history undo (yum 원복)
+
+[패키지 삭제]
+- yum remove (yum remove -y httpd.x86_64)
+- rpm -e (rpm -e nmap-7.80-1.x86_64.rpm)
+
+크론탭
+- crontab (윈도우 작업 스케쥴러)
+
+파일 찾기 
+- find (find / -name "test")
+
+OS 설정
+- ulimit (/etc/security/limits.conf)
+
+
+심화
+- 용량 관리 자동화
+  find /usr/local/apache2/logs/* -type f -mtime +30 -name "*log*" | xargs rm -rf
+- 프로세스 관리 자동화 (시작 프로그램)
+
+
+다중명령어
+- &&, ;, ||
