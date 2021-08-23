@@ -1,3 +1,12 @@
+#### Telent 접속 되고 나갈 때
+
+```cmd
+Escape character is '^]'.
+SSH-2.0-OpenSSH_4.3
+```
+
+Ctrl + ] -> 다음에 quit 명령어 입력
+
 ### 방화벽이 오픈되어 있고 프로세스가 떠 있는 경우
 
 ```cmd
