@@ -12,7 +12,6 @@ mount -t cifs //smfile01.sss.com/storage/ /was/test -o username=osm,password=123
 uid, gid는 내가 리눅스 서버에서 접속하려고 하는 계정의 정보이다.
 
 ```
-
 vi /etc/passwd
 
 appadmin:x:1003:1003::/app:/bin/bash
