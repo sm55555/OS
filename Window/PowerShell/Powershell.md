@@ -2,7 +2,7 @@
 
 ### Number of User Accounts
 
-(get-aduser -filter ).count
+(get-aduser -filter *).count
 
 ### Number of Enabled User Accounts
 
