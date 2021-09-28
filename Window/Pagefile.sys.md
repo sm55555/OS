@@ -26,3 +26,5 @@ Pagefile.sys란 리눅스의 swap 메모리 처럼 메모리가 부족 시 하�
 5. 옮기려는 드라이브에 -> 시스템이 관리하는 크기 클릭 -> 페이징 파일 크기(MB) [시스템에서 관리] 확인 
 
 <img src="https://user-images.githubusercontent.com/38831314/125555537-f6421140-980a-428e-bac0-5f22ed3ab984.png" width="50%" height="50%"/>
+
+# !! 리부팅이 필요한 작업
