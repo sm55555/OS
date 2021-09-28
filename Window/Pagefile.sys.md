@@ -28,4 +28,3 @@ Pagefile.sys란 리눅스의 swap 메모리 처럼 메모리가 부족 시 하�
 <img src="https://user-images.githubusercontent.com/38831314/125555537-f6421140-980a-428e-bac0-5f22ed3ab984.png" width="50%" height="50%"/>
 
 # !! 리부팅이 필요한 작업
-<span style="color:red">붉은 색</span>
