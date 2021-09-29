@@ -41,9 +41,7 @@ Get-ADPrincipalGroupMembership [사용자 이름] | select name
 
 ### 특정 OU, 특정 기간내 생성된 계정 정보
 
-₩₩₩powershell
 $Days = 1
 $Time = (Get-Date).Adddays(-($Days))
 get-aduser -filter * -SearchBase “OU=testuser,DC=hist,DC=co,DC=kr” -Property whenCreated | Where {$_.whenCreated -gt $Time} | ft Name, WhenCreated
-₩₩₩
 
