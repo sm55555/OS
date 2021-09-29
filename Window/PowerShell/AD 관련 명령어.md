@@ -30,6 +30,6 @@ Get-ADUser -Filter * -Property whenCreated | Where {$_.whenCreated -gt $Time} | 
 
 Add-ADGroupMember -Identity [그룹이름] -Member [사용자 이름]
 
-## 특정 계정의 소속 그룹 정보
+### 특정 계정의 소속 그룹 정보
 
 Get-ADPrincipalGroupMembership [사용자 이름] | select name
