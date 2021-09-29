@@ -15,7 +15,7 @@ powershell Stop-Service [서비스 명] -Force
 
 ### 서비스 사용안함
 
-```cmd
+```powershell
 powershell Set-Service [서비스 명] -StartupType Disabled
 ```
 
