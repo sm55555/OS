@@ -3,13 +3,13 @@
 
 ### 서비스 조회
 
-```cmd
+```powershell
 powershell Get-Service [서비스 명]
 ```
 
 ### 서비스 종료
 
-```cmd
+```powershell
 powershell Stop-Service [서비스 명] -Force
 ```
 
