@@ -16,6 +16,11 @@
 
 (get-aduser -filter * -SearchBase “OU=Division,DC=test,DC=com” |where {$_.enabled -eq “True”}).count
 
+만약 co.kr 로 끝나면 아래와 같이 수정
+
+(get-aduser -filter * -SearchBase “OU=Division,DC=test,DC=co,DC=kr” |where {$_.enabled -eq “True”}).count
+
+
 ### Account information
 
 Get-ADUser –Identity “delmaster” –Properties *
@@ -31,5 +36,16 @@ Get-ADUser -Filter * -Property whenCreated | Where {$_.whenCreated -gt $Time} | 
 Add-ADGroupMember -Identity [그룹이름] -Member [사용자 이름]
 
 ### 특정 계정의 소속 그룹 정보
+
+Get-ADPrincipalGroupMembership [사용자 이름] | select name
+
+### 특정 OU, 특정 기간내 생성된 계정 정보
+
+$Days = 1
+$Time = (Get-Date).Adddays(-($Days))
+get-aduser -filter * -SearchBase “OU=testuser,DC=hist,DC=co,DC=kr” -Property whenCreated | Where {$_.whenCreated -gt $Time} | ft Name, WhenCreated
+
+
+
 
 Get-ADPrincipalGroupMembership [사용자 이름] | select name
