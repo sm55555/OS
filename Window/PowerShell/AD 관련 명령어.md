@@ -36,6 +36,8 @@ Get-ADUser –Identity “delmaster” –Properties *
 
 ### 최근 몇일내 생성된 계정 조회
 
+$Days 값으로 지정한다.
+
 ```powershell
 $Days = 1
 $Time = (Get-Date).Adddays(-($Days))
@@ -55,6 +57,8 @@ Get-ADPrincipalGroupMembership [사용자 이름] | select name
 ```
 
 ### 특정 OU, 특정 기간내 생성된 계정 정보
+
+$Days 값으로 지정한다.
 
 ```powershell
 $Days = 1
