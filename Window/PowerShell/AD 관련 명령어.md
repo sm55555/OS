@@ -66,3 +66,9 @@ $Time = (Get-Date).Adddays(-($Days))
 get-aduser -filter * -SearchBase “OU=testuser,DC=hist,DC=co,DC=kr” -Property whenCreated | Where {$_.whenCreated -gt $Time} | ft Name, WhenCreated
 ```
 
+### 특정 OU 사용자들의 특정 정보 추출
+
+```powershell
+Get-ADUser -Filter * -SearchBase “OU=하위OU,OU=상위OU,DC=test,DC=co,DC=kr” -Property * | ft MemberOf
+```
+
