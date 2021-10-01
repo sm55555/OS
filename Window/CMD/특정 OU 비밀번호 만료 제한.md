@@ -17,3 +17,5 @@ dsquery user OU=관리,DC=test,DC=co,DC=kr | dsmod user -pwdneverexpires yes
 ```cmd
 dsquery user -limit 1000 OU=관리,DC=test,DC=co,DC=kr | dsmod user -pwdneverexpires yes
 ```
+
+![image](https://user-images.githubusercontent.com/38831314/135551110-0e4b30bf-356a-4089-aa40-92104b2bb83e.png)
