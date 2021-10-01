@@ -72,3 +72,13 @@ get-aduser -filter * -SearchBase “OU=testuser,DC=hist,DC=co,DC=kr” -Property
 Get-ADUser -Filter * -SearchBase “OU=하위OU,OU=상위OU,DC=test,DC=co,DC=kr” -Property * | ft MemberOf
 ```
 
+### 엄청 긴거 출력할 때
+
+Format-Table -Wrap -AutoSize 옵션 추가
+Out-File -Width 2500 이걸 추가해야 길게 늘어져서 ... 안보임
+-FilePath d:\test.txt 파일 저장할 방식
+
+```powershell
+Get-ADUser -Filter * -SearchBase “OU=ITRO,OU=DIVISION,DC=kalmate,DC=net” -Property * | Format-Table -Wrap -AutoSize Name, Description, title, EmailAddress, mail, EMailExternal, UserPrincipalName, CN, GivenName, sn, DisplayName, MemberOf, unicodePwd, ObjectGUID, CanonicalName, displayNamePrintable, DistinguishedName, extensionAttribute7, mailNickname, SamAccountName, targetAddress | Out-File -Width 2500 -FilePath d:\test.txt
+```
+
