@@ -27,8 +27,9 @@
 (get-aduser -filter * -SearchBase “OU=Division,DC=test,DC=co,DC=kr” |where {$_.enabled -eq “True”}).count
 ```
 
-
 ### Account information
+
+delmaster 사용자 정보 조회
 
 ```powershell
 Get-ADUser –Identity “delmaster” –Properties *
