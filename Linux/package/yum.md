@@ -1,4 +1,4 @@
-# how to install speccifci package
+# how to install specifi package
 
 ### 1. first remove all relative package
 
