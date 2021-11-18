@@ -4,7 +4,7 @@ disk i/o 높은 경우
 
 ![image](https://user-images.githubusercontent.com/38831314/142376103-d7707220-2f5c-4868-879b-0f2afd7d0598.png)
 
-아래 명령어로 disk i/o 사용 프로세스 확인 가능
+##### 아래 명령어로 disk i/o 사용 프로세스 확인 가능
 
 ```
 pidstat -d -p ALL
