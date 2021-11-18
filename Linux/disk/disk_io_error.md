@@ -19,9 +19,10 @@ Linux 3.10.0-1160.36.2.el7.x86_64 (was1) 	11/18/2021 	_x86_64_	(4 CPU)
 05:11:04 PM     0         2      0.00      0.00      0.00  kthreadd
 ```
 
-확인해보니 gp2를 사용하느 EBS가 Burst를 다 소진하여 i/o가 부족현상 발생
+확인해보니 gp2를 사용하느 EBS가 Burst를 다 소진하여 i/o가 부족현상 발생(0이 되는게 Burst를 다 소진)
+
+##### 해당 EBS -> monitor 탭 -> Burst balance (%)
 
 ![image](https://user-images.githubusercontent.com/38831314/142376649-962ffced-2708-45aa-be8e-7323433040c0.png)
-
 
 gp3로 타입 변경해서 해결 (타입 변경은 서비스에 영향이 없다.)
