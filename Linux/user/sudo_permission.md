@@ -21,3 +21,10 @@ root    ALL=(ALL)       ALL
 appadmin        ALL=(ALL)       ALL
 
 ```
+
+되지 않으면 가장밑에 추가해주자
+
+```
+#includedir /etc/sudoers.d
+appadmin        ALL=(ALL)       NOPASSWD: AL
+```
