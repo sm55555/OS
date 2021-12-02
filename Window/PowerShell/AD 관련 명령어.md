@@ -42,7 +42,14 @@ $Days 값으로 지정한다.
 ```powershell
 $Days = 1
 $Time = (Get-Date).Adddays(-($Days))
+
+// 이름 생성 날짜 기반
+
 Get-ADUser -Filter * -Property whenCreated | Where {$_.whenCreated -gt $Time} | ft Name, WhenCreated
+
+// 고유 ID
+
+Get-ADUser -Filter * -Property whenCreated | Where {$_.whenCreated -gt $Time} | ft SamAccountName
 ```
 
 ### 특정 계정 그룹 넣기
