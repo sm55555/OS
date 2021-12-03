@@ -80,6 +80,17 @@ get-aduser -filter * -SearchBase “OU=testuser,DC=test,DC=co,DC=kr” -Property
 Get-ADUser -Filter * -SearchBase “OU=하위OU,OU=상위OU,DC=test,DC=co,DC=kr” -Property * | ft MemberOf
 ```
 
+
+### 하루내로 생성된 특정 OU 사용자들 특정 그룹에 넣기
+
+ForEach-Object 중요 !
+
+```powershell
+$Days = 1
+$Time = (Get-Date).Adddays(-($Days))
+Get-ADuser -Filter * -SearchBase “OU=test,DC=test,DC=net” -Property whenCreated | Where {$.whenCreated -gt $Time} | ForEach-Object {Add-ADGroupMember -Identity "gggggroup" -Members $ }
+```
+
 ### 엄청 긴거 출력할 때
 
 Format-Table -Wrap -AutoSize 옵션 추가
