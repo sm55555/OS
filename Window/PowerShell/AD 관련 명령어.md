@@ -71,7 +71,7 @@ $Days 값으로 지정한다.
 ```powershell
 $Days = 1
 $Time = (Get-Date).Adddays(-($Days))
-get-aduser -filter * -SearchBase “OU=testuser,DC=hist,DC=co,DC=kr” -Property whenCreated | Where {$_.whenCreated -gt $Time} | ft Name, WhenCreated
+get-aduser -filter * -SearchBase “OU=testuser,DC=test,DC=co,DC=kr” -Property whenCreated | Where {$_.whenCreated -gt $Time} | ft Name, WhenCreated
 ```
 
 ### 특정 OU 사용자들의 특정 정보 추출
