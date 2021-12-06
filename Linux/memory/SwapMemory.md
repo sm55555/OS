@@ -39,3 +39,11 @@ swapon /swapfile
 ```
 swapoff /swapfile 
 ```
+
+#### SwapMemory 리부팅 후에도 설정 방법
+
+vi /etc/fstab
+
+```
+/swapfile swap swap defaults 0 0
+```
