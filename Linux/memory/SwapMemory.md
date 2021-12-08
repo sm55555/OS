@@ -27,7 +27,6 @@ swapon -s
 ex) /swapfile
 
 ```
-mkdir /swapfile
 chmod 600 /swapfile
 dd if=/dev/zero of=/swapfile bs=1MiB count=8192 (1024가 1GB)
 mkswap /swapfile
