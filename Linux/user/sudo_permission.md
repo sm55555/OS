@@ -26,5 +26,5 @@ appadmin        ALL=(ALL)       ALL
 
 ```
 #includedir /etc/sudoers.d
-appadmin        ALL=(ALL)       NOPASSWD: AL
+appadmin        ALL=(ALL)       NOPASSWD: ALL
 ```
