@@ -28,12 +28,12 @@ chmod o+x test.txt
 
 ### 주체 정보
 
+```
 u : 소유자
 g : 그룹
 o : other
-
 r : read
 w : write
 x : execute(실행)
-
+```
 
