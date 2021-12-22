@@ -1,6 +1,12 @@
 ### SPF,DKIM
 
-SPF(Sender Policy Framework), DKIM(DomainKeys Identified Mail)는 이메일 발신자가 정말 자기 자신이 맞는지, 위조되지 않았는지 검증하기 위함
+```
+SPF(Sender Policy Framework)
+DKIM(DomainKeys Identified Mail 
+```
+
+
+이메일 발신자가 정말 자기 자신이 맞는지, 위조되지 않았는지 검증하기 위함
 아래 설정이 없으면 메일보낼 때 이메일을 차단하거나, 스팸으로 분류 될 수 있다.
 
 
