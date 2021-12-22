@@ -2,7 +2,7 @@
 
 ```
 SPF(Sender Policy Framework)
-DKIM(DomainKeys Identified Mail 
+DKIM(DomainKeys Identified Mail)
 ```
 
 
