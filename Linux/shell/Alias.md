@@ -10,6 +10,13 @@
 
 ### example
 
+```
 rm 명령어에 -i를 달아서 삭제할때 한번 더 묻기
+alias rm='rm -i'
+
 history는 h로
+alias h='history'
+
 clear는 c로
+alias c='clear'
+```
