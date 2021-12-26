@@ -15,4 +15,5 @@ $(Commands)
 ~$ date
 ~$ 'Today is $(date)'
 ~$ 'Today is date'
+~$ "Today is $(date +%Y%m%d)"
 ```
