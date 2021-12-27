@@ -28,6 +28,6 @@ echo "third $2"
 --- 결과 ---
 
 first parameter.sh
-red
-blue
+second red
+third blue
 ```
