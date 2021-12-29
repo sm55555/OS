@@ -4,7 +4,7 @@
 vi /etc/sudoers
 ```
 
-appadmin 아래와 같이 추가
+appadmin 아래와 같이 추가 NOPASSWD: ALL를 추가해야 비번 없이 sudo su - 체인지
 
 ```
 ## Next comes the main part: which users can run what software on
@@ -18,8 +18,7 @@ appadmin 아래와 같이 추가
 ##
 ## Allow root to run any commands anywhere
 root    ALL=(ALL)       ALL
-appadmin        ALL=(ALL)       ALL
-
+appadmin        ALL=(ALL)       NOPASSWD: ALL
 ```
 
 되지 않으면 가장밑에 추가해주자
