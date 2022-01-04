@@ -11,3 +11,10 @@ grep -r "443" etc/*
 ```
 grep -r "mod-jk" /data/was/jbcs-2.4.37/httpd
 ```
+
+현재 폴더 하위에 "7443"가 포함된 내용 출력
+
+```
+grep -r '7443' ./
+```
+
