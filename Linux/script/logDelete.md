@@ -10,8 +10,7 @@ find /logs/*.log.* -ctime +30
 
 ```
 #!/bin/bash
-cd /logs
-find ./*.log.* -ctime +30 -exec rm -f {} \;
+find /logs/*.log.* -ctime +30 -exec rm -f {} \;
 ```
 
 ### 특정 로그를 지우고 삭제 전과 동일한 용량을 보일때
