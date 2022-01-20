@@ -150,7 +150,7 @@ PV를 VG에 추가
 LV 탐색
 
 ```
-[root@hxerp-ifdb var]# lvscan
+[root@test var]# lvscan
   ACTIVE            '/dev/centos/root' [<15.53 GiB] inherit
   ACTIVE            '/dev/centos/home' [<2.27 GiB] inherit
   ACTIVE            '/dev/centos/swap' [21.64 GiB] inherit
