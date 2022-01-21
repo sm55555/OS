@@ -125,14 +125,14 @@ sdd                 8:48   0   50G  0 disk
 sr0                11:0    1 1024M  0 rom
 ```
 
-pv 추가
+#### pv 추가
 
 ```
 [root@test]#  pvcreate /dev/sdd
 Physical volume "/dev/sdd" successfully created
 ```
 
-추가할 vg에 추가해야 함 (VG 이름 centos)
+#### 추가할 VG에 추가해야 함 (VG 이름 centos)
 
 ```
 [root@test]# pvscan
@@ -140,14 +140,14 @@ PV /dev/sda3   VG centos          lvm2 [68.74 GiB / 4.00 MiB free]
 Total: 1 [68.74 GiB] / in use: 1 [68.74 GiB] / in no VG: 0 [0   ]
 ```
 
-PV를 VG에 추가
+#### PV를 VG에 추가
 
 ```
 [root@test]# vgextend centos /dev/sdd
   Volume group "centos" successfully extende
 ```
 
-LV 탐색
+#### LV 탐색
 
 ```
 [root@test var]# lvscan
@@ -156,13 +156,13 @@ LV 탐색
   ACTIVE            '/dev/centos/swap' [21.64 GiB] inherit
 ```
 
-LV에 추가
+#### LV에 용량 전부
 
 ```
 lvextend -l +100%FREE -n /dev/centos/root
 ```
 
-XFS 형식 디스크는 아래와 같이 추가
+#### XFS 형식 디스크는 아래와 같이 추가, ext는 다른 방식 사용 vi /etc/fstab으로 확인하자
 
 ```
 xfs_growfs /dev/centos/root
