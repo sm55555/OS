@@ -9,7 +9,7 @@
 # sysctl -a
 ```
 
-[/etc/security/limits.conf 수정]
+[/etc/security/limits.conf 수정] <- nginx 사용 시 적용
 
 ```
 nginx hard nproc 10240
