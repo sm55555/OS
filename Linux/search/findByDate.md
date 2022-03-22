@@ -14,3 +14,9 @@ find . -name "*.gz" -mtime +60
 ./error.log-20201014.gz
 ./error.log-20201015.gz
 ```
+
+```
+find . -name "*.gz" -mtime +60 -delete
+```
+
+.gz으로 끝나는 파일 중 60일 이상 된것들을 삭제해라 
