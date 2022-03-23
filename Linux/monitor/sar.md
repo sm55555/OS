@@ -23,3 +23,8 @@ sar은 linux 특성상 유휴 공간을 캐시영역으로 사용하기 때문�
 ### CPU 사용량 확인
 
 sar -f /var/log/sa/sa06 -s HH:MM:SS -e HH:MM:SS
+
+
+### Load Average 
+
+sar -q
