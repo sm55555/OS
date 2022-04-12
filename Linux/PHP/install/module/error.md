@@ -1,6 +1,6 @@
 ## ssh2 모듈 다운 시 에러
 
-./configure --with-ssh2 --with-php-config=/usr/local/php/bin/php-config
+./configure --with-ssh2 --with-php-config=/usr/local/php/bin/php-config 명령 시
 
 configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.
 
