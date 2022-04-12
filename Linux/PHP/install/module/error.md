@@ -1,4 +1,4 @@
-## ssh2 모듈 다운 시 에러
+## ssh2 모듈 configure 시 에러
 
 ./configure --with-ssh2 --with-php-config=/usr/local/php/bin/php-config 명령 시
 
