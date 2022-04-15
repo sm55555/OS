@@ -25,6 +25,8 @@ pecl install apcu
 
 ex) libmcrypt.so.4 => Not Found
 
+아래 부분을 참고해서
+
 https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/l/libmcrypt-2.5.8-26.el8.x86_64.rpm2
 
 ## ssh2 모듈 configure 시 에러
@@ -45,3 +47,17 @@ pecl install apcu
 ```
 pecl install oci8-2.2.0
 ```
+
+pecl이 안될경우 따로 컴파일을 해줘야한다.
+
+https://pecl.php.net/get/oci8-2.2.0.tgz22 에서 알맞은 PHP를 받은 다음
+
+```
+tar xvf oci8-2.2.0.tgz
+cd oci8-2.2.0
+/usr/local/php/bin/phpize
+./configure --with-php-config=/usr/local/php/bin/php-config
+make
+make install
+```
+
