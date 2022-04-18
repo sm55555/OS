@@ -29,6 +29,10 @@ ex) libmcrypt.so.4 => Not Found
 
 https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/l/libmcrypt-2.5.8-26.el8.x86_64.rpm2
 
+```
+rpm -ivh libmcrypt-2.5.8-26.el8.x86_64.rpm2
+```
+
 ## ssh2 모듈 configure 시 에러
 
 ```
