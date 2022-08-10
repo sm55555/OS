@@ -3,6 +3,7 @@
 
 
 ### openssl 변경 -> git 참고
+https://github.com/sm55555/OS/blob/master/Linux/openssl/version%20change.md
 
 ```
 wget https://www.openssl.org/source/openssl-1.1.1q.tar.gz
