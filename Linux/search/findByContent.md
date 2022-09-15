@@ -18,3 +18,18 @@ grep -r "mod-jk" /data/was/jbcs-2.4.37/httpd
 grep -r '7443' ./
 ```
 
+특정 위치에  해당 콘텐츠를 가진 파일 이름 출력 ex) abcd
+
+```
+egrep -rl "abcd" /home/ec2-user/log
+
+
+egrep -rl "abcd" /home/ec2-user/log | awk '{print " "$0" "}'
+```
+
+특정 위치에  해당 콘텐츠를 가진 파일 이름 출력하고 그 파일을 임의의 위치로 이동
+
+```
+egrep -rl "abcd" /home/ec2-user/log | awk '{print "cp "$0" /home/targetfolder/targetlog/"}'
+```
+
