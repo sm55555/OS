@@ -1,5 +1,7 @@
 # hosts.deny hosts.allow
 
+Priority  host.allow >> hosts.deny
+
 Linux provides two files host.allow and host.deny to allow and deny access to SSH port.
 you simply need to add your trusted IP addresses to host.allow file, and add suspicious IP address in host.deny file
 
