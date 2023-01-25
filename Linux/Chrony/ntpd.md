@@ -1,3 +1,13 @@
+## ntpd
+
+```
+가끔 CentOS 6에 깔려있는 서버들이 있다.
+
+service status ntpd
+service start ntpd
+service stop ntpd
+```
+
 ### ntpd 시간 즉시 동기화
 
 ```
