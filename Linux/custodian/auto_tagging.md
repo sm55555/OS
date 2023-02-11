@@ -1,4 +1,4 @@
-## Auto_tagging
+## Automatically tagging the resources
 
 ```yaml
 policies:
