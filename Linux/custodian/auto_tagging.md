@@ -1,5 +1,21 @@
 ## Automatically tagging the resources
 
+1. First You have to make policy as shonw in the document below.
+2. and Run command
+
+Use "$ custodian run --dryrun" command to check the affected resource and it does not run any actions on the resources.
+
+```
+custodian run --dryrun -c example.yml -s out
+```
+
+Use "$ custodian run" command to deploy the policy to your cloud account.
+
+```
+custodian run --output-dir=[anywhere] example.yml
+```
+
+
 
 #### [EC2]
 
