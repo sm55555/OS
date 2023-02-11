@@ -25,11 +25,11 @@ policies:
   resource: aws.ec2
   mode:
     type: cloudtrail
-    role: arn:aws:iam:~~
+    role: arn:aws:iam:111122223333:role/aws-temp-role
     events:
        - RunInstances
   filters:
-     - "tag:owner": absent 
+     - tag:owner: absent 
   actions:
     - type: auto-tag-user
       tag: owner
@@ -38,3 +38,51 @@ policies:
         CreationDate: "{now:%Y%m%d}"
         other : aaa
 ```
+
+#### [Seucrity Group]
+
+```yaml
+policies:
+- name: sg-auto-tag
+  resource: security-group
+  mode:
+    type: cloudtrail
+    role: arn:aws:iam:111122223333:role/aws-temp-role
+    events:
+       - soruce: ec2.amazonaws.com
+         event: CreateSecurityGroup
+         ids: responseElements.groupId
+  filters:
+     - tag:owner: absent 
+  actions:
+    - type: auto-tag-user
+      tag: owner
+    - type : tag
+      tags:
+        CreationDate: "{now:%Y%m%d}"
+```
+
+#### [LB]
+
+```yaml
+policies:
+- name: lb-auto-tag
+  resource: app-elb
+  mode:
+    type: cloudtrail
+    role: arn:aws:iam:111122223333:role/aws-temp-role
+    events:
+       - soruce: elasticloadbalancing.amazonaws.com
+         event: CreateLoadBalancer
+         ids: responseElements.loadBalancers[0].loadBalancerArn
+  filters:
+     - tag:owner: absent 
+  actions:
+    - type: auto-tag-user
+      tag: owner
+    - type : tag
+      tags:
+        CreationDate: "{now:%Y%m%d}"
+```
+
+
