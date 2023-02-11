@@ -1,27 +1,24 @@
 ## Automatically tagging the resources
 
+
+#### [EC2]
+
 ```yaml
 policies:
-- name: elastic-kubernetes-auto-tag
-  resource: aws.eks
-  comments: |
-    Find EKS that has not been tagged with mandatory owner tag on-
-    creation. Tag EKS with the user who  created it. This policy 
-    does not apply on existing EKS.
-  filters:
-     - "tag:owner": absent 
+- name: ec2-auto-tag
+  resource: aws.ec2
   mode:
     type: cloudtrail
+    role: arn:aws:iam:~~
     events:
-      - source: eks.amazonaws.com
-        event: CreateCluster
-        ids: requestParameters.name
-    execution-options:
-      output_dir: s3://s3bucket/cclogs/{account_id}/
-    runtime: python3.8
+       - RunInstances
+  filters:
+     - "tag:owner": absent 
   actions:
     - type: auto-tag-user
-      tag: auto-owner
-      principal_id_tag: principalid
-
+      tag: owner
+    - type : tag
+      tags:
+        CreationDate: "{now:%Y%m%d}"
+        other : aaa
 ```
