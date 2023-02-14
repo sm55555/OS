@@ -313,6 +313,28 @@ tcp6       0      0 :::22                   :::*                    LISTEN      
 
 modify - #Port 22 and add port that you want
 
+
+## How to check service in Linux
+
+List installed unit files and their enablement state Such as enable, disable, static
+
+enable : service can turn on by itself
+disable : service can turn off by itself
+static : service can't turn on by itself, it needs to other service to turn on. So you can disable change it such as enable, disable
+
+```
+[ec2-user@ip-10-0-0-86 ~]$ service list-unit-files
+UNIT FILE                                     STATE   
+proc-sys-fs-binfmt_misc.automount             static  
+dev-hugepages.mount                           static  
+dev-mqueue.mount                              static  
+proc-fs-nfsd.mount                            static  
+proc-sys-fs-binfmt_misc.mount                 static  
+run-vmblock\x2dfuse.mount                     disabled
+
+```
+
+
 ## Window
 
 ~~~
