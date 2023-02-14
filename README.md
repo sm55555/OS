@@ -320,7 +320,7 @@ List installed unit files and their enablement state Such as enable, disable, st
 
 enable : service can turn on by itself
 disable : service can turn off by itself
-static : service can't turn on by itself, it needs to other service to turn on. So you can disable change it such as enable, disable
+static : service can't turn on by itself, it needs to other service or socket to execute. So you can disable change it such as enable, disable
 
 ```
 [ec2-user@ip-10-0-0-86 ~]$ service list-unit-files
