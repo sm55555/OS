@@ -7,7 +7,7 @@ wget --no-check-certificate https://www.openssl.org/source/openssl-1.1.1t.tar.gz
 tar -zxvf openssl-1.1.1t.tar.gz
 cd openssl-1.1.1t/
 
-[]
+
 ./config shared zlib
 make && make install
 cp /usr/local/lib64/libssl.so.1.1 /usr/lib64/libssl.so.1.1
