@@ -59,3 +59,12 @@ openssl version
 OpenSSL 1.1.1g  21 Apr 2020
 
 ```
+
+## 컴파일 프로그램 삭제 방법
+
+```
+./config 한 폴더 위치 가서
+make uninstall
+
+openssl version 체크
+```
