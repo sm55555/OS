@@ -23,7 +23,7 @@ openssl version
 
 
 ## 방법 2
-
+```
 #### openssl 기존버젼 확인
 bash> openssl version
 —————————
@@ -69,3 +69,4 @@ bash> openssl version
 ——————————————
 OpenSSL 1.1.1g  21 Apr 2020
 ——————————————
+```
