@@ -4,7 +4,7 @@
 
 ```
 #!/bin/bash
-find /logs -type -d -ctime +30 -exec ls
+find /logs -type -d -ctime +30
 ```
 
 
