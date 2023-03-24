@@ -28,3 +28,24 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 released updates 
 ```
+
+
+### 도커 올리고하는방법
+
+baseos, appstream, extras
+
+### Rocky linux 다운 후 도커 마운트
+
+```
+docker run -v /data/rocky:/mnt --name rockylinux -d rockylinux/rockylinux sleep infinity
+```
+
+### repo 설정 여기선 appstream
+
+reposync -g -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
+
+### create repo
+
+createrepo /mnt/appstream
+
+
