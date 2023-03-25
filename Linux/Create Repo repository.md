@@ -50,8 +50,21 @@ createrepo /mnt/appstream
 
 ### Error: GPG check FAILED
 
+
+-g, --gpgcheck
+              Remove packages that fail GPG signature checking after
+              downloading.  exit status is '1' if at least one package
+              was removed.
+
 ```
-rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial 
+
+or
+
+g 옵션을 뺀다....ch
+
+reposync  -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
+
 ```
 
 
