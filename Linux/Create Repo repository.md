@@ -48,4 +48,11 @@ reposync -g -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
 
 createrepo /mnt/appstream
 
+### Error: GPG check FAILED
+
+```
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+```
+
+
 
