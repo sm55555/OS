@@ -40,9 +40,17 @@ baseos, appstream, extras
 docker run -v /data/rocky:/mnt --name rockylinux -d rockylinux/rockylinux sleep infinity
 ```
 
-### repo 설정 여기선 appstream
+### Rockylinux repo 설정
 
+```
 reposync -g -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
+```
+
+### CentOS repo 설정
+
+```
+reposync -g -m --repoid=appstream --download-metadata --newest-only --download_path=/mnt
+```
 
 ### create repo
 
