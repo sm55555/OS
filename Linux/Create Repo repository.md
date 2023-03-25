@@ -50,7 +50,6 @@ createrepo /mnt/appstream
 
 ### Error: GPG check FAILED
 
-
 -g, --gpgcheck
               Remove packages that fail GPG signature checking after
               downloading.  exit status is '1' if at least one package
@@ -61,10 +60,21 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
 or
 
-g 옵션을 뺀다....ch
+g 옵션을 제외
+reposync -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
+```
 
-reposync  -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
+### doceker save (docker image -> tar)
+Before do it you must pull image what you want to save image
 
+```
+docker save -o nginx.tar nginx.latest
+```
+
+### docker load (tar -> docker image)
+
+```
+docker load -i nginx.tar
 ```
 
 
