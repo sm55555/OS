@@ -1,4 +1,4 @@
-#### 1. Repo 서버에 웹서버 ex nginx 를 설치
+#### 1. Repo 서버에 웹서버 nginx 를 설치
 
 nginx 설정
 
@@ -123,10 +123,60 @@ docker load -i nginx.tar
 
 ## Ubuntu repo 설정
 
+nginx가 있다는 가정하에 현재는 조회하면 /data 하위에 바라보게 되어 있다. centos, rocky 나누어져 있기 떄문
 
 ```
-
+sudo cp /usr/bin/apt-mirror /usr/bin/apt-mirror.original
+sudo chown root:root /usr/bin/apt-mirror && sudo chmod 755 /usr/bin/apt-mirror
 ```
 
+/etc/apt/mirror.list
+
+```
+############# config ##################
+#
+# set base_path    /var/spool/apt-mirror
+#
+# set mirror_path  $base_path/mirror
+# set skel_path    $base_path/skel
+# set var_path     $base_path/var
+# set cleanscript $var_path/clean.sh
+# set defaultarch  <running host architecture>
+# set postmirror_script $var_path/postmirror.sh
+# set run_postmirror 0
+set nthreads     20
+set _tilde 0
+#
+############# end config ##############
+ 
+deb http://kr.archive.ubuntu.com/ubuntu focal main restricted
+deb http://kr.archive.ubuntu.com/ubuntu focal-updates main restricted
+deb http://kr.archive.ubuntu.com/ubuntu focal universe
+deb http://kr.archive.ubuntu.com/ubuntu focal-updates universe
+deb http://kr.archive.ubuntu.com/ubuntu focal multiverse
+deb http://kr.archive.ubuntu.com/ubuntu focal-updates multiverse
+deb http://kr.archive.ubuntu.com/ubuntu focal-backports main restricted universe multiverse
+deb http://kr.archive.ubuntu.com/ubuntu focal-security main restricted
+deb http://kr.archive.ubuntu.com/ubuntu focal-security universe
+deb http://kr.archive.ubuntu.com/ubuntu focal-security multiverse
+```
+
+대략 250GB 정도된다.
+
+```
+apt-mirror
+
+심볼릭 링크 변경
+
+ln -s /var/spool/apt-mirror/mirror/kr.archive.ubuntu.com/ubuntu/ /data
+```
+
+client 설정 /etc/hosts
+```
+111.222.333.444 archive.ubuntu.com
+
+yum install chrony
+
+```
 
 
