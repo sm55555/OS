@@ -66,7 +66,7 @@ curl -v http://mirror.rockylinux/baseos/repodata/repomd.xml
 
 ### 도커 올리고하는방법
 
-baseos, appstream, extras
+baseos, appstream, extras, epel
 
 ### Rocky linux 다운 후 도커 마운트
 
@@ -88,7 +88,9 @@ reposync -g -m --repoid=appstream --download-metadata --newest-only --download_p
 
 ### create repo
 
+```
 createrepo /mnt/appstream
+```
 
 ### Error: GPG check FAILED
 
