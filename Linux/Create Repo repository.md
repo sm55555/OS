@@ -19,7 +19,7 @@ server {
 #### 2. 하위폴더를 만들고 아래 명령어로 받아준다. 여기선 /data
 
 ```
-rsync  -avrt --progress rsync://mirror.centos.org/ /data/rocky/
+rsync -avrt --progress rsync://mirror.centos.org/ /data/rocky/
 ```
 
 #### 3. client 세팅
