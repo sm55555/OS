@@ -60,7 +60,7 @@ client 서버에서 테스트를 진행해야한다. (특히 centos, rocky) 아�
 
 ```
 curl -v http://mirrorlist.centos.org/baseos/repodata/repomd.xml
-curl -v http://mirror.rockylinux/baseos/repodata/repomd.xml
+curl -v http://dl.rockylinux.org/rocky/baseos/repodata/repomd.xml
 ```
 
 
