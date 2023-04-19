@@ -59,7 +59,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 client 서버에서 테스트를 진행해야한다. (특히 centos, rocky) 아래 명령어 결과 후 repomd 관련 내용 출력
 
 ```
-curl -v http://mirrorlist.centos.org/baseos/repodata/repomd.xml
+curl -v http://mirror.centos.org/centos/baseos/repodata/repomd.xml
 curl -v http://dl.rockylinux.org/rocky/baseos/repodata/repomd.xml
 ```
 
