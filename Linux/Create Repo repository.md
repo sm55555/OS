@@ -68,10 +68,11 @@ curl -v http://dl.rockylinux.org/rocky/baseos/repodata/repomd.xml
 
 baseos, appstream, extras, epel
 
-### Rocky linux 다운 후 도커 마운트
+### Rocky linux &&& CentOS 7.9 다운 후 도커 마운트
 
 ```
 docker run -v /data/rocky:/mnt --name rockylinux -d rockylinux/rockylinux sleep infinity
+docker run -v /data/centos:/mnt --name cenots -d cetnos:7.9.2009 sleep infinity
 ```
 
 ### Rockylinux repo 설정
