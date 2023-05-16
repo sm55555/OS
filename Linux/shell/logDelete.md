@@ -36,3 +36,11 @@ lsof | grep deleted
 <img src="https://user-images.githubusercontent.com/38831314/111253864-39818b80-8657-11eb-83d6-6ef63711c8be.png">
 
 출력된 결과에서 아까 삭제했던 파일을 찾아서 어떤 프로세스에서 아직 파일을 사용 중인지 확인할 수 있다. 
+
+### 파일 내용 없애기
+
+messages 용량이 너무 많은 경우
+
+```
+cat  /dev/null > messages
+```
