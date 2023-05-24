@@ -1,0 +1,13 @@
+### nohup 
+
+프로세스를 Background로 돌려주는 명령어이다. 뒤에 &를 안붙이면 Foreground가 된다
+
+```
+nohup java -jar *.jar &
+```
+
+를 실행 시키면 nohup.out이 생기는데 실시간으로 로그를 확인하고 싶으면
+
+```
+tail -f nohup.out
+```
