@@ -176,7 +176,7 @@ client 설정 /etc/hosts
 ```
 111.222.333.444 archive.ubuntu.com
 
-yum install chrony
+apt-get install chrony
 
 ```
 
