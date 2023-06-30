@@ -63,6 +63,17 @@ Output
 mkfs.ext4 /dev/sdb
 ```
 
+그리고 blikd로 UUID 확인 후 /etc/fstab에 넣고 테스트
+
+```
+mount /dev/sdb1 /data
+
+umount /data
+mount -a
+```
+
+
+
 
 
 
