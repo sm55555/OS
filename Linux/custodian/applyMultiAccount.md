@@ -39,6 +39,8 @@ arn:aws:iam::222222222222:role/lambda-function-deploy을 이루는 policy에는 
          들을 만들어 준다.
 
 ```
+
+```
 accounts
   - account_id: '111111111111'
     name: one
@@ -58,7 +60,6 @@ accounts
 ```
 
 #### ec2-create-terminate.yaml
-
 
 ```
 policies:
