@@ -1,4 +1,4 @@
-### chronyc -a makestep 시 500 Failure
+### chronyc -a makestep 시 500 Failure (Ubuntu)
 
 1. chrony 최신버전으로 업데이트
 
