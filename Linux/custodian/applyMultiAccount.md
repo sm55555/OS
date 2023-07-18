@@ -40,6 +40,14 @@ arn:aws:iam::222222222222:role/lambda-function-deploy을 이루는 policy에는 
 
 ```
 
+### custodian에서 전파
+
+```
+c7n-org run -c account.yaml -s / -u ec2-create-terminate.yaml
+```
+
+#### account.yaml
+
 ```
 accounts
   - account_id: '111111111111'
