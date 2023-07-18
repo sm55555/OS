@@ -1,4 +1,4 @@
-### Assume Role 설정
+## 1. Assume Role 설정
 
 111111111111 계정 custodian-role에 포함된 policy
 
@@ -62,3 +62,6 @@ arn:aws:iam::222222222222:role/lambda-function-deploy을 이루는 policy에는 
     ]
 }
 ```
+
+## 2. Custodian 설정
+
