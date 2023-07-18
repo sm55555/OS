@@ -42,6 +42,8 @@ arn:aws:iam::222222222222:role/lambda-function-deploy을 이루는 policy에는 
 
 ### custodian에서 전파
 
+111111111,2222222,333333 계정에 Lambda를 생성한다. 여기서 각계정의 custodian-role는 필요한 policy를 가져야하며 이것들은 따로 해줘야한다.
+
 ```
 c7n-org run -c account.yaml -s / -u ec2-create-terminate.yaml
 ```
