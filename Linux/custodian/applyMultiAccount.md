@@ -69,7 +69,7 @@ arn:aws:iam::222222222222:role/lambda-function-deploy을 이루는 policy에는 
 c7n-org run -c accounts.yaml -s ./ -u ec2-create-terminate.yaml
 ```
 
-#### accounts.yam
+#### accounts.yaml
 
 ```
 accounts
@@ -90,7 +90,7 @@ accounts
     role: arn:aws:iam:13333333333:role/custodian-role
 ```
 
-#### ec2-create-terminate
+#### ec2-create-terminate.yaml
 
 ```
 policies:
