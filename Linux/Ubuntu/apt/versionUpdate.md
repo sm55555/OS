@@ -6,7 +6,7 @@
 apt list -a chrony 로 설치할 수 있는 버전확인
 ```
 
-설치할 수 있는 버전을 Repo에 넣은 다음 apt-get install을 진행해준다. 그리고 설치한 다음 최신버전을
+설치할 수 있는 버전을 Repo [알맞은] 위치에 넣은 다음 apt-get install을 진행해준다. 그리고 설치한 다음 최신버전을
 
 ```
 dpkg -i [.deb] 로 설치하면 업데이트 하면 된다.
