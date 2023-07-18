@@ -36,42 +36,7 @@ arn:aws:iam::222222222222:role/lambda-function-deploy을 이루는 policy에는 
                 "events:PutRule",
                 "lambda:*",
                 "sts:*",
-                "elasticloadbalancing:*",
-                "events:ListTargetsByRule"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-```
-
-[Trust relationships] -> 111111111111 계정에서 사용할 수 있어야 한다.
-```
-
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::111111111111:root"
-            },
-            "Action": "sts:AssumeRole",
-            "Condition": {}
-        }
-    ]
-}
-```
-
-## 2. Custodian 설정
-
-```
-c7n-org run -c accounts.yaml -s ./ -u ec2-create-terminate.yaml
-```
-
-#### accounts.yaml
-
-accounts.yaml에 111111111111, 222222222222, 333333333333 에 custodian-role을 붙인 ec2-create-terminate.yaml을 만들어 준다.
+         들을 만들어 준다.
 
 ```
 accounts
