@@ -78,9 +78,17 @@ accounts
     regions:
       - ap-northeast-2
     role: arn:aws:iam:111111111111:role/custodian-role
+  - account_id: '222222222222'
+    name: one
+    regions:
+      - ap-northeast-2
+    role: arn:aws:iam:222222222222:role/custodian-role
+  - account_id: '333333333333'
+    name: one
+    regions:
+      - ap-northeast-2
+    role: arn:aws:iam:13333333333:role/custodian-role
 ```
-
-
 
 #### ec2-create-terminate
 
