@@ -59,6 +59,7 @@ accounts
 
 #### ec2-create-terminate.yaml
 
+
 ```
 policies:
 - name: ec2-create-terminate
