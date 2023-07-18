@@ -65,3 +65,7 @@ arn:aws:iam::222222222222:role/lambda-function-deploy을 이루는 policy에는 
 
 ## 2. Custodian 설정
 
+```
+c7n-org run -c accounts.yaml -s ./ -u ec2-create-terminate.yaml
+```
+
