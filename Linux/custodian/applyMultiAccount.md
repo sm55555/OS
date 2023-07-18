@@ -71,6 +71,8 @@ c7n-org run -c accounts.yaml -s ./ -u ec2-create-terminate.yaml
 
 #### accounts.yaml
 
+accounts.yaml에 111111111111, 222222222222, 333333333333 에 custodian-role을 붙인 ec2-create-terminate.yaml을 만들어 준다.
+
 ```
 accounts
   - account_id: '111111111111'
