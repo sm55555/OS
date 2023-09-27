@@ -23,3 +23,19 @@ Type=oneshot
 [Install]
 WantedBy=multi-user.target
 ```
+
+```
+/home/test.sh
+```
+
+```
+systemctl stop test.service
+```
+
+```
+chmod 755 /home/test.sh
+systemctl daemon-reload
+systemctl enable shutdown.service
+```
+
+이렇게 구성하면 서버가 켜져있고 shutdown.service가 프로세스 내려간 상태라도 서버 shutdown 시 /home/test.sh 가 동작한다.
