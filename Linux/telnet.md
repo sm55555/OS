@@ -43,3 +43,25 @@ root      2292     2  0 May26 ?        00:00:00 [ena]
 root      2296     1  0 May26 ?        00:00:00 /usr/lib/systemd/systemd-udevd
 root      3136     1  0 May26 ttyS0    00:00:00 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
 ```
+
+## 방화벽이 열려있는지 확인하는 다른 방법
+
+### curl
+
+```
+curl -v telnet://IP:PORT/
+
+curl -v telnet://127.0.0.1:22/
+```
+
+### /dev/tcp
+
+```
+echo > /dev/tcp/IP/PORT
+
+echo > /dev/tcp/172.0.0.1/22
+```
+
+
+
+
