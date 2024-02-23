@@ -79,6 +79,18 @@ docker run -v /data/centos:/mnt --name cenots -d cetnos:7.9.2009 sleep infinity
 
 #### 만약 Host 서버가 proxy 서버(Squid를 통해서) 나갈 경우 doceker를 올릴때 추가 설정이 필요하다.
 
+```
+docker run -v /data/rocky:/mnt -e HTTPS_PROXY=http:58.123.456.15:3128 --name rockylinux -d rockylinux/rockylinux sleep infinity
+```
+
+기본 rockylinux는 reposync, create repo 가 없기에 아래에 명령이 필요하다.
+
+```
+yum update
+yum install yum-utils
+yum install createrepo_c
+```
+
 ##### Rockylinux repo 설정
 
 ```
