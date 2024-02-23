@@ -91,16 +91,16 @@ yum install yum-utils
 yum install createrepo_c
 ```
 
-##### Rockylinux repo 설정
+##### Rockylinux repo 설정 (!! g 옵션 반드시 빼야함)
 
 ```
-reposync -g -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
+reposync -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
 ```
 
-### CentOS repo 설정
+### CentOS repo 설정 (!! g 옵션 반드시 빼야함)
 
 ```
-reposync -g -m --repoid=appstream --download-metadata --newest-only --download_path=/mnt
+reposync -m --repoid=appstream --download-metadata --newest-only --download_path=/mnt
 ```
 
 ### create repo
