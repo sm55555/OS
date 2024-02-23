@@ -97,6 +97,18 @@ yum install createrepo_c
 reposync -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
 ```
 
+Rockylinux는 크게 appstream, baseos, epel, extras 총 4개의 Repository가 있는데
+
+epel은 Rockylinux에서 공식 지원하진 않지만, CentOS 8 과는 호환이 되어서 CentOS 8의 epel repo를 활용한다.
+
+```
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+reposync -m --repoid=epel --download-metadata --newest-only -p=/mnt/
+```
+
+
+
 ### CentOS repo 설정 (!! g 옵션 반드시 빼야함)
 
 ```
