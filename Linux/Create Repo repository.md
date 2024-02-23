@@ -77,7 +77,7 @@ docker run -v /data/rocky:/mnt --name rockylinux -d rockylinux/rockylinux sleep 
 docker run -v /data/centos:/mnt --name cenots -d cetnos:7.9.2009 sleep infinity
 ```
 
-만
+
 
 ### Rockylinux repo 설정
 
@@ -109,7 +109,7 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
 or
 
-g 옵션을 제외
+g 옵션을 제외 g를 넣으면 시간을 너무 많이 써야한다.
 reposync -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
 ```
 
