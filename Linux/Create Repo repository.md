@@ -70,10 +70,14 @@ baseos, appstream, extras, epel
 
 ### Rocky linux &&& CentOS 7.9 다운 후 도커 마운트
 
+사전에 필요한 /data 하위에 rocky 등 centos 폴더를 만들어야 한다.
+
 ```
 docker run -v /data/rocky:/mnt --name rockylinux -d rockylinux/rockylinux sleep infinity
 docker run -v /data/centos:/mnt --name cenots -d cetnos:7.9.2009 sleep infinity
 ```
+
+만
 
 ### Rockylinux repo 설정
 
