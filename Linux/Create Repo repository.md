@@ -79,7 +79,7 @@ docker run -v /data/centos:/mnt --name cenots -d cetnos:7.9.2009 sleep infinity
 
 #### 만약 Host 서버가 proxy 서버(Squid를 통해서) 나갈 경우 doceker를 올릴때 추가 설정이 필요하다.
 
-### Rockylinux repo 설정
+##### Rockylinux repo 설정
 
 ```
 reposync -g -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
