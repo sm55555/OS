@@ -103,7 +103,11 @@ reposync -m --repoid=appstream --download-metadata --newest-only -p=/mnt/
 reposync -m --repoid=appstream --download-metadata --newest-only --download_path=/mnt
 ```
 
-### create repo
+
+
+### createrepo
+
+createrepo는 Yum이든, dnf이든 서버의 Repository Manager들의 설치, 삭제, 관리등을 reposync 후에 Metadata를 통해서 관리하는데, 이 Metadata들을  createrepo로 갱신한다. 그래서 reposync 후에 createrepo를 수행해야 한다.
 
 ```
 createrepo /mnt/appstream
