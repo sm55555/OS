@@ -162,4 +162,23 @@ systemctl start opendkim
 ```
 
 ### dkim test
-# opendkim-testkey -d
+```
+ opendkim-testkey -d naver.com -s mail2 -vvv
+```
+
+### 결과
+```
+opendkim-testkey: using default configfile /etc/opendkim.conf
+opendkim-testkey: checking key 'mail2._domainkey.naver.com'
+opendkim-testkey: key OK
+```
+ 
+### dkim 적용 받은 메일 발송 로그
+```
+Dec  4 11:16:39 xc-mail02 postfix/smtpd[623]: E4DA94002063: client=unknown[192.168.124.12]
+Dec  4 11:16:39 xc-mail02 postfix/cleanup[627]: E4DA94002063: message-id=<>
+Dec  4 11:16:39 xc-mail02 opendkim[620]: E4DA94002063: DKIM-Signature field added (s=mail2, d=naver.com)
+Dec  4 11:16:40 xc-mail02 postfix/qmgr[394]: E4DA94002063: from=<xc-nms@naver.com>, size=704, nrcpt=1 (queue active)
+```
+ 
+## 발송된 메일의 원본을 gmail에서 확인하면 DKIM 'PASS'(도메인naver.com)으로 보여짐
