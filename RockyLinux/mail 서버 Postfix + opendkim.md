@@ -11,7 +11,8 @@ yum -y install postfix opendkim
 
 cd /etc/postfix 
 vi main.cf
- 
+
+ ```
 ### Postfix setting
 queue_directory = /var/spool/postfix
 command_directory = /usr/sbin
@@ -50,7 +51,7 @@ milter_default_action = accept
 milter_protocol = 6
 smtpd_milters = inet:127.0.0.1:8891
 non_smtpd_milters = $smtpd_milters
- 
+``` 
  
  
 # cat /etc/opendkim.conf
