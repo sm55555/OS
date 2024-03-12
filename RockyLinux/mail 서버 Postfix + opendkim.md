@@ -1,11 +1,15 @@
+### Centos install
 
+```
 yum -y install postfix opendkim
- 
-#rocky
+```
+
+### rocky install
+```
 # dnf install -y postfix opendkim opendkim-tools
- 
-cd /etc/postfix
- 
+```
+
+cd /etc/postfix 
 vi main.cf
  
 ### Postfix setting
