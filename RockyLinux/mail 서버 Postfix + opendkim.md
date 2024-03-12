@@ -54,7 +54,7 @@ non_smtpd_milters = $smtpd_milters
 ``` 
  
  
-# cat /etc/opendkim.conf
+### cat /etc/opendkim.conf
 ```
 PidFile /var/run/opendkim/opendkim.pid
 Mode    sv
@@ -76,7 +76,7 @@ InternalHosts           refile:/etc/opendkim/TrustedHosts
 OversignHeaders From
 ``` 
  
-# cd /etc/opendkim
+### cd /etc/opendkim
 ```
 [root@xc-mail02 opendkim]# ll
 total 12
@@ -86,19 +86,19 @@ drwxr-x--- 3 opendkim opendkim   31 Dec  3 19:45 keys
 -rw-r----- 1 opendkim opendkim  540 Dec  4 11:15 TrustedHosts
 ```
  
-# cat KeyTable
+### cat KeyTable
 ```
 #default._domainkey.example.com example.com:default:/etc/opendkim/keys/default.private
 mail2._domainkey.naver.com naver.com:mail2:/etc/opendkim/keys/mail2.naver.com/mail2.private
 ```
  
-# cat SigningTable
+### cat SigningTable
 ```
 #example.com default._domainkey.example.com
 *@naver.com   mail2._domainkey.naver.com
 ```
  
-# cat TrustedHosts
+### cat TrustedHosts
 ```
 127.0.0.1
 58.228.236.0/24
@@ -112,7 +112,7 @@ mail2._domainkey.naver.com naver.com:mail2:/etc/opendkim/keys/mail2.naver.com/ma
 *.naver.com
 ```
  
-# cd /etc/opendkim/keys
+### cd /etc/opendkim/keys
 ```
 mkdir mail2.naver.com
  
@@ -126,7 +126,7 @@ total 8
 -rw------- 1 opendkim opendkim 311 Dec  3 20:30 mail2.txt
 ```
  
-# cat mail2.private
+### cat mail2.private
 ```
 -----BEGIN RSA PRIVATE KEY-----
 MIICXAIBAAKBgQDB5vKi0UcHjqE4ojAAMwv9k29JHBYK51u7Xg9uyfJqnp0XY4ot
@@ -134,23 +134,24 @@ MIICXAIBAAKBgQDB5vKi0UcHjqE4ojAAMwv9k29JHBYK51u7Xg9uyfJqnp0XY4ot
 -----END RSA PRIVATE KEY-----
 ```
  
-# cat mail2.txt ==> Cloudflare dns에 txt로 추가 해야함
+### cat mail2.txt ==> Cloudflare dns에 txt로 추가 해야함
 ```
 mail2._domainkey        IN      TXT     ( "v=DKIM1; k=rsa; " "p=MIGfMA0GCSqGSDAQAB" )  ; ----- DKIM key mail2 for naver.com
 ```
  
-# Cloudflare DNS 등록
-# A record 생성
-mailx.naver.com 175.126.124.12x
+### Cloudflare DNS 등록
+### A record 생성
+mail2.naver.com 175.126.124.12x
  
-# txt 생성 (위 mail2.txt 참고하여 등록)
-mailx._domainkey v=DKIM1; k=rsa; " "p=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### txt 생성 (위 mail2.txt 참고하여 등록)
+mail2._domainkey v=DKIM1; k=rsa; " "p=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
  
-# CloudFlare의 TXT naver.com SPF에 IP추가 등록
+### CloudFlare의 TXT naver.com SPF에 IP추가 등록
 v=spf1 ip4:111.111.111.111 ip4:111.111.111.112 ip4:111.111.111.113 ip4:111.111.111.114 ip4:[신규 IP] -all
 
  
-# nslookup으로 A record, domainkey, spf 확인
+### nslookup으로 A record, domainkey, spf 확인
+```
 set query=txt
  
 systemctl enable postfix
@@ -158,6 +159,7 @@ systemctl enable opendkim
  
 systemctl start postfix
 systemctl start opendkim
- 
+```
+
 ### dkim test
 # opendkim-testkey -d
