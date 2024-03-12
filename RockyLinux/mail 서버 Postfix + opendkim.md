@@ -181,4 +181,4 @@ Dec  4 11:16:39 xc-mail02 opendkim[620]: E4DA94002063: DKIM-Signature field adde
 Dec  4 11:16:40 xc-mail02 postfix/qmgr[394]: E4DA94002063: from=<xc-nms@naver.com>, size=704, nrcpt=1 (queue active)
 ```
  
-## 발송된 메일의 원본을 gmail에서 확인하면 DKIM 'PASS'(도메인naver.com)으로 보여짐
+### 발송된 메일의 원본을 gmail에서 확인하면 DKIM 'PASS'(도메인naver.com)으로 보여짐
