@@ -55,6 +55,7 @@ non_smtpd_milters = $smtpd_milters
  
  
 # cat /etc/opendkim.conf
+```
 PidFile /var/run/opendkim/opendkim.pid
 Mode    sv
 Syslog  yes
@@ -73,25 +74,32 @@ SigningTable            refile:/etc/opendkim/SigningTable
 ExternalIgnoreList      refile:/etc/opendkim/TrustedHosts
 InternalHosts           refile:/etc/opendkim/TrustedHosts
 OversignHeaders From
- 
+``` 
  
 # cd /etc/opendkim
+```
 [root@xc-mail02 opendkim]# ll
 total 12
 drwxr-x--- 3 opendkim opendkim   31 Dec  3 19:45 keys
 -rw-r----- 1 opendkim opendkim  437 Dec  4 10:49 KeyTable
 -rw-r----- 1 opendkim opendkim 1266 Dec  3 20:33 SigningTable
 -rw-r----- 1 opendkim opendkim  540 Dec  4 11:15 TrustedHosts
+```
  
 # cat KeyTable
+```
 #default._domainkey.example.com example.com:default:/etc/opendkim/keys/default.private
 mail2._domainkey.naver.com naver.com:mail2:/etc/opendkim/keys/mail2.naver.com/mail2.private
+```
  
 # cat SigningTable
+```
 #example.com default._domainkey.example.com
 *@naver.com   mail2._domainkey.naver.com
+```
  
 # cat TrustedHosts
+```
 127.0.0.1
 58.228.236.0/24
 175.126.124.64/26
@@ -102,8 +110,10 @@ mail2._domainkey.naver.com naver.com:mail2:/etc/opendkim/keys/mail2.naver.com/ma
 192.168.123.0/24
 192.168.127.0/24
 *.naver.com
+```
  
 # cd /etc/opendkim/keys
+```
 mkdir mail2.naver.com
  
 cd mail2.naver.com
@@ -114,15 +124,20 @@ opendkim-genkey -D /etc/opendkim/keys/mail2.naver.com -d naver.com -s mail2
 total 8
 -rw------- 1 opendkim opendkim 887 Dec  3 20:30 mail2.private
 -rw------- 1 opendkim opendkim 311 Dec  3 20:30 mail2.txt
+```
  
 # cat mail2.private
+```
 -----BEGIN RSA PRIVATE KEY-----
 MIICXAIBAAKBgQDB5vKi0UcHjqE4ojAAMwv9k29JHBYK51u7Xg9uyfJqnp0XY4ot
 ~~
 -----END RSA PRIVATE KEY-----
+```
  
 # cat mail2.txt ==> Cloudflare dns에 txt로 추가 해야함
+```
 mail2._domainkey        IN      TXT     ( "v=DKIM1; k=rsa; " "p=MIGfMA0GCSqGSDAQAB" )  ; ----- DKIM key mail2 for naver.com
+```
  
 # Cloudflare DNS 등록
 # A record 생성
