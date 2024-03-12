@@ -182,3 +182,6 @@ Dec  4 11:16:40 xc-mail02 postfix/qmgr[394]: E4DA94002063: from=<xc-nms@naver.co
 ```
  
 ### 발송된 메일의 원본을 gmail에서 확인하면 DKIM 'PASS'(도메인naver.com)으로 보여짐
+
+<img width="586" alt="image" src="https://github.com/sm55555/OS/assets/38831314/b4117076-ca88-4c1b-965e-79e0b4e411f5">
+
