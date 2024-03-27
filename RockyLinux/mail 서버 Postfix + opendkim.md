@@ -180,6 +180,25 @@ Dec  4 11:16:39 mail postfix/cleanup[627]: E4DA94002063: message-id=<>
 Dec  4 11:16:39 mail opendkim[620]: E4DA94002063: DKIM-Signature field added (s=mail2, d=naver.com)
 Dec  4 11:16:40 mail postfix/qmgr[394]: E4DA94002063: from=<xc-nms@naver.com>, size=704, nrcpt=1 (queue active)
 ```
+
+
+### TrustedHosts 미포함시 IP 에러 
+
+예시 192.168.0.0/16 없을 경우
+
+```
+Dec  4 11:16:39 mail postfix/smtpd[623]: E4DA94002063: client from unkonn[192.168.1.1]
+Dec  4 11:16:39 mail postfix/smtpd[623]: E4DA94002063: client=unknown[192.168.1.1]
+Dec  4 11:16:39 mail postfix/cleanup[627]: E4DA94002063: message-id=<>
+Dec  4 11:16:39 mail opendkim[620]: E4DA94002063: [192.168.1.1] [192.168.1.1] not internal
+                        ---중요---
+Dec  4 11:16:39 mail opendkim[620]: E4DA94002063: not authenticated
+Dec  4 11:16:39 mail opendkim[620]: E4DA94002063: no signature data
+                        ---중요---
+Dec  4 11:16:40 mail postfix/qmgr[394]: E4DA94002063: from=<xc-nms@naver.com>, size=704, nrcpt=1 (queue active)
+```
+
+
  
 ### 발송된 메일의 원본을 gmail에서 확인하면 DKIM 'PASS'(도메인naver.com)으로 보여짐
 
