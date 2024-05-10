@@ -19,3 +19,9 @@ tcpdump src 192.168.0.1 and not dst port 22: 출발지 IP가 192.168.0.1이고 �
 tcpdump -w tcpdump.log: 결과를 파일로 저장(텍스트가 아닌 바이너리 형식으로 저장)
 tcpdump -r tcpdump.log: 저장한 파일을 읽음
 ```
+
+FTP 관련 dump
+
+```
+tcpdump -i eth0 host 172.0.0.1 and not host 10.20.103.73 and port 22
+```
