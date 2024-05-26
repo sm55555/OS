@@ -198,7 +198,11 @@ Dec  4 11:16:39 mail opendkim[620]: E4DA94002063: no signature data
 Dec  4 11:16:40 mail postfix/qmgr[394]: E4DA94002063: from=<xc-nms@naver.com>, size=704, nrcpt=1 (queue active)
 ```
 
+있는 경우에는
 
+```
+Dec  4 11:16:39 mail opendkim[620]: E4DA94002063: DKIM-Signature field added (s=mail2, d=naver.com)
+```
  
 ### 발송된 메일의 원본을 gmail에서 확인하면 DKIM 'PASS'(도메인naver.com)으로 보여짐
 
