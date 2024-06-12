@@ -17,7 +17,7 @@ find "$folderPath" -type d -empty -delete
 
 30일 이상된 폴더 출력
 
-```
+```sh
 #!/bin/bash
 find /logs -type -d -ctime +30
 ```
@@ -27,13 +27,13 @@ find /logs -type -d -ctime +30
 
 30일 이상된 파일 출력
 
-```
+```sh
 find /logs/*.log.* -ctime +30
 ```
 
 30일 이상된 파일 지우는 스크립트
 
-```
+```sh
 #!/bin/bash
 find /logs/*.log.* -ctime +30 -exec rm -f {} \;
 ```
@@ -42,7 +42,7 @@ find /logs/*.log.* -ctime +30 -exec rm -f {} \;
  
 프로세스에서 삭제된 파일들을 사용하는 경우가 있다.
 
-``` 
+``` sh
 lsof | grep deleted
 ```
 
