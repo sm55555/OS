@@ -1,6 +1,11 @@
 ### 끝판 왕 명령어
 
-<span style="color: red;">This text is red.</span>
+This is a normal paragraph.
+
+![Red Badge](https://img.shields.io/badge/Red-Text-red)
+![Green Badge](https://img.shields.io/badge/Green-Text-green)
+![Blue Badge](https://img.shields.io/badge/Blue-Text-blue)
+
 
 
 ```sh
