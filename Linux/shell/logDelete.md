@@ -1,3 +1,18 @@
+### 끝판 왕 명령어
+
+```
+#!/bin/bash
+
+# Define the path to the directory
+folderPath="/path/to/your/directory"
+
+# Find and delete files older than 5 days
+find "$folderPath" -type f -mtime +5 -exec rm -f {} \;
+
+# Find and delete empty directories
+find "$folderPath" -type d -empty -delete
+```
+
 ### 몇일 이상 된 폴더 지우기
 
 30일 이상된 폴더 출력
