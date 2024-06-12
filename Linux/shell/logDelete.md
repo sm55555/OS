@@ -1,6 +1,6 @@
 ### 끝판 왕 명령어
 
-```
+```sh
 #!/bin/bash
 
 # Define the path to the directory
