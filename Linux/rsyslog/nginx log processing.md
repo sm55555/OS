@@ -4,7 +4,7 @@
 
 #### [Server Config]
 
-```
+```bash
 # Load the imfile module
 $ModLoad imfile
 
