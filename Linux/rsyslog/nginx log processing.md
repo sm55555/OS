@@ -2,6 +2,35 @@
 
 ![image](https://github.com/sm55555/OS/assets/38831314/aa94f66b-be5b-4c78-b20d-caea019d04af)
 
+#### [Server Config]
+
+```
+# Load the imfile module
+$ModLoad imfile
+
+# Nginx access log configuration
+$InputFileName /var/log/nginx/access.log
+$InputFileTag nginx-access:
+$InputFileStateFile stat-nginx-access
+$InputFileSeverity info
+$InputFileFacility local7
+$InputRunFileMonitor
+
+# Nginx error log configuration
+$InputFileName /var/log/nginx/error.log
+$InputFileTag nginx-error:
+$InputFileStateFile stat-nginx-error
+$InputFileSeverity error
+$InputFileFacility local6
+$InputRunFileMonitor
+
+# Forward Nginx access logs to IDC log server
+local7.* @@<idc-log-server-ip>:514
+
+# Forward Nginx error logs to IDC log server
+local6.* @@<idc-log-server-ip>:514
+```
+
 
 #### [Client Config]
 
