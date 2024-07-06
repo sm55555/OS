@@ -9,6 +9,32 @@
 
 #### [Server Config]
 
+/etc/rsyslog.conf
+
+```bash
+# Load necessary modules
+$ModLoad imudp
+$UDPServerRun 514
+$ModLoad imtcp
+$InputTCPServerRun 514
+
+# Template to include the tag in the log file name
+template(name="DynFile" type="string" string="/var/log/%HOSTNAME%/%PROGRAMNAME%.log")
+
+# Store Nginx access logs
+if $programname == 'nginx-access' then ?DynFile
+
+# Store Nginx error logs
+if $programname == 'nginx-error' then ?DynFile
+
+# Store other logs
+*.* /var/log/other_logs.log
+```
+
+#### [Client Config]
+
+/etc/rsyslog.d/nginx-logs.conf
+
 ```bash
 # Load the imfile module
 $ModLoad imfile
@@ -37,24 +63,3 @@ local6.* @@<idc-log-server-ip>:514
 ```
 
 
-#### [Client Config]
-
-```bash
-# Load necessary modules
-$ModLoad imudp
-$UDPServerRun 514
-$ModLoad imtcp
-$InputTCPServerRun 514
-
-# Template to include the tag in the log file name
-template(name="DynFile" type="string" string="/var/log/%HOSTNAME%/%PROGRAMNAME%.log")
-
-# Store Nginx access logs
-if $programname == 'nginx-access' then ?DynFile
-
-# Store Nginx error logs
-if $programname == 'nginx-error' then ?DynFile
-
-# Store other logs
-*.* /var/log/other_logs.log
-```
