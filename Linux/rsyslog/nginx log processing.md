@@ -2,6 +2,11 @@
 
 ![image](https://github.com/sm55555/OS/assets/38831314/aa94f66b-be5b-4c78-b20d-caea019d04af)
 
+#### [Security Group]
+
+<img width="546" alt="image" src="https://github.com/sm55555/OS/assets/38831314/a51d5926-ceff-48c8-8da1-d97aa91db612">
+
+
 #### [Server Config]
 
 ```bash
