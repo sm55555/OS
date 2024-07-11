@@ -22,11 +22,11 @@ $InputTCPServerRun 514
 #template(name="DynFile" type="string" string="/var/log/%HOSTNAME%/%PROGRAMNAME%.log")
 
 # Store Nginx access logs
-if $programname == 'nginx-access' then ?DynFile
+if $programname == 'nginx-access' then /var/log/nginx/access.log
 & ~
 
 # Store Nginx error logs
-if $programname == 'nginx-error' then ?DynFile
+if $programname == 'nginx-error' then /var/log/nginx/error.log
 & ~
 
 # Store other logs
