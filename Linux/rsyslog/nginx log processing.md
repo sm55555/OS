@@ -33,6 +33,10 @@ if $programname == 'nginx-error' then /var/log/nginx/error.log
 *.* /var/log/other_logs.log
 ```
 
+```text
+The & ~ syntax in rsyslog configuration means "stop processing this message." It's a way to tell rsyslog that after handling this particular message with the specified rule, it should not continue to process it with any further rules.
+```
+
 #### [Client Config]
 
 /etc/rsyslog.d/nginx-logs.conf
