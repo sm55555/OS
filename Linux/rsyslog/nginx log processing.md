@@ -19,13 +19,15 @@ $ModLoad imtcp
 $InputTCPServerRun 514
 
 # Template to include the tag in the log file name
-template(name="DynFile" type="string" string="/var/log/%HOSTNAME%/%PROGRAMNAME%.log")
+#template(name="DynFile" type="string" string="/var/log/%HOSTNAME%/%PROGRAMNAME%.log")
 
 # Store Nginx access logs
 if $programname == 'nginx-access' then ?DynFile
+& ~
 
 # Store Nginx error logs
 if $programname == 'nginx-error' then ?DynFile
+& ~
 
 # Store other logs
 *.* /var/log/other_logs.log
