@@ -44,7 +44,7 @@ $InputFileName /var/log/nginx/access.log
 $InputFileTag nginx-access:
 $InputFileStateFile stat-nginx-access
 $InputFileSeverity info
-$InputFileFacility local7
+$InputFileFacility local6
 $InputRunFileMonitor
 
 # Nginx error log configuration
@@ -52,14 +52,14 @@ $InputFileName /var/log/nginx/error.log
 $InputFileTag nginx-error:
 $InputFileStateFile stat-nginx-error
 $InputFileSeverity error
-$InputFileFacility local6
+$InputFileFacility local7
 $InputRunFileMonitor
 
 # Forward Nginx access logs to IDC log server
-local7.* @@<idc-log-server-ip>:514
+local6.* @@<idc-log-server-ip>:514
 
 # Forward Nginx error logs to IDC log server
-local6.* @@<idc-log-server-ip>:514
+local7.* @@<idc-log-server-ip>:514
 ```
 
 
