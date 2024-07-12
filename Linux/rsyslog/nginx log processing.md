@@ -67,4 +67,5 @@ local6.* @@<idc-log-server-ip>:514
 local7.* @@<idc-log-server-ip>:514
 ```
 
+대신 용량이 많으면 좀 발동이 늦게 걸린다.
 
