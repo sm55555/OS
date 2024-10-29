@@ -49,5 +49,17 @@ Match User fss2
 systemctl restart sshd
 ```
 
+### 접속 테스트
+
+```
+sftp -v -P [port] test-ftp@target-ip
+```
+
+-v 옵션은 디버깅 -P는 사용할 포트
+
+
+
+
+
 
 
