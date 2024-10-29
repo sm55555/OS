@@ -45,5 +45,9 @@ Match User fss2
         X11Forwarding no
 ```
 
+```
+systemctl restart sshd
+```
+
 
 
