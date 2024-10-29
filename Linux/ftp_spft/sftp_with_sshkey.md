@@ -25,5 +25,12 @@ cat ~/.ssh/id_rsa.pub
 /data
 ```
 
+```
+chown root:root /data
+chown 755 /data
+```
+
+
 해당 홈 폴더(/data)에서 하위 폴더를 만든다.
 .ssh/authorized_keys  -> 다음에 .ssh/authorized_keys  pulbic key 값 복사을 넣는다.
+
