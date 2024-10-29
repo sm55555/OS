@@ -12,3 +12,7 @@ pulbic key 값 복사
 ```
 cat ~/.ssh/id_rsa.pub 
 ```
+
+
+### target server
+
