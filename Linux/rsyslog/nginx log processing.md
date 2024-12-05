@@ -18,19 +18,12 @@ $UDPServerRun 514
 $ModLoad imtcp
 $InputTCPServerRun 514
 
-# Template to include the tag in the log file name
-#template(name="DynFile" type="string" string="/var/log/%HOSTNAME%/%PROGRAMNAME%.log")
+module(load="imudp")
+input(type="imudp" port="514")
 
-# Store Nginx access logs
-if $programname == 'nginx-access' then /var/log/nginx/access.log
-& ~
+local1.*            /var/log/nginx/error.log
+local2.*            /var/log/nginx/access.log
 
-# Store Nginx error logs
-if $programname == 'nginx-error' then /var/log/nginx/error.log
-& ~
-
-# Store other logs
-*.* /var/log/other_logs.log
 ```
 
 The & ~ syntax in rsyslog configuration means "stop processing this message." It's a way to tell rsyslog that after handling this particular message with the specified rule, it should not continue to process it with any further rules.
@@ -49,7 +42,7 @@ $InputFileName /var/log/nginx/access.log
 $InputFileTag nginx-access:
 $InputFileStateFile stat-nginx-access
 $InputFileSeverity info
-$InputFileFacility local6
+$InputFileFacility local1
 $InputRunFileMonitor
 
 # Nginx error log configuration
@@ -57,14 +50,14 @@ $InputFileName /var/log/nginx/error.log
 $InputFileTag nginx-error:
 $InputFileStateFile stat-nginx-error
 $InputFileSeverity error
-$InputFileFacility local7
+$InputFileFacility local2
 $InputRunFileMonitor
 
 # Forward Nginx access logs to IDC log server
-local6.* @@<idc-log-server-ip>:514
+local1.* @<idc-log-server-ip>:514
 
 # Forward Nginx error logs to IDC log server
-local7.* @@<idc-log-server-ip>:514
+local2.* @<idc-log-server-ip>:514
 ```
 
 대신 용량이 많으면 좀 발동이 늦게 걸린다.
