@@ -9,7 +9,6 @@
 ```
 vi /etc/default/chrony
 SYNC_IN_CONTAINER="yes"
-
 ```
 
 2번으로 하면 chronyc -a makestep는 되지만 timedatectl set-ntp true는 안된다. 되게 하려면 1번으로 설정
