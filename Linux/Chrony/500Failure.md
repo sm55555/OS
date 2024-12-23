@@ -19,6 +19,9 @@ SYNC_IN_CONTAINER="yes"
 -x 옵션을 뺴준다.
 
 ```
+securityContext:
+  capabilities:
+    add: ["SYS_TIME"]
 command:
 - /bin/bash
 - "-c"
