@@ -15,7 +15,7 @@ Amazon linux 2023 환경
 [root@test ~]# tar -xzvf Python-3.12.2.tgz
 [root@test ~]# cd /etc/Python-3.12.2
 
-[root@test ~]# ./configure --enable --optimizations
+[root@test ~]# ./configure --enable-optimizations
 [root@test ~]# make -j$(nproc)
 [root@test ~]# make install
 
