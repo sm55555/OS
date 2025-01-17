@@ -4,6 +4,10 @@
 Amazon linux 2023 환경
 
 ```
+[root@test ~]# yum group list
+```
+
+```
 [root@test ~]# yum groupinstall "Developments Tools"
 ```
 
