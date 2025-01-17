@@ -30,3 +30,9 @@ Amazon linux 2023 환경
 ```
 alias python='/usr/local/bin/python3.12'
 ```
+
+apply
+
+```
+source ~/.bashrc 
+```
