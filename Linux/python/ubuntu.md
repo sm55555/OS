@@ -8,7 +8,7 @@ apt-get install libc-dev
 
 ```
 
-설치를 위한 repo 구성
+설치를 위한 repo 구성 (nexus)도 가능
 
 ```
 deb http://your-repository/ubuntu focal main restricted universe multiverse
