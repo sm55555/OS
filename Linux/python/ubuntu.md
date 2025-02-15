@@ -19,7 +19,6 @@ deb http://your-repository/ubuntu  jammy main restricted universe multiverse
 deb http://your-repository/ubuntu  jammy-updates main restricted universe multiverse
 deb http://your-repository/ubuntu  jammy-backports main restricted universe multiverse
 deb http://your-repository/ubuntu  jammy-security main restricted universe multiverse
-
 ```
 
 
