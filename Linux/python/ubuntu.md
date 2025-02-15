@@ -31,5 +31,10 @@ sudo make altinstall
 ```
 
 
+```
+python3.12 --version
+```
+
+
 
 
