@@ -205,6 +205,15 @@ apt-mirror
 ln -s /var/spool/apt-mirror/mirror/kr.archive.ubuntu.com/ubuntu/ /data
 ```
 
+or sync 명령어
+
+```
+debmirror --verbose --method=http --host=kr.archive.ubuntu.com --root=ubuntu \
+--dist=jammy,jammy-updates,jammy-backports,jammy-security,focal,focal-updates,focal-backports,focal-security \
+--section=main,restricted,universe,multiverse \
+--arch=amd64 --nosource --ignore-release-gpg /data/ubuntu
+```
+
 client 설정 /etc/hosts
 ```
 111.222.333.444 archive.ubuntu.com
