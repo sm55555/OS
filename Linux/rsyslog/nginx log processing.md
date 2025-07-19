@@ -156,7 +156,7 @@ if $syslogfacility-text == 'local3' then {
 # 이 액션은 원격 서버 장애에 대비하여 반드시 자체적인 비동기 큐를 가져야 합니다.
 action(
     type="omfwd"
-    target="172.18.13.188"
+    target="targetIP"
     protocol="udp"
 
     # -- 원격 전달 전용 액션 큐 설정 --
