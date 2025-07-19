@@ -62,7 +62,7 @@ local2.* @<idc-log-server-ip>:514
 
 대신 용량이 많으면 좀 발동이 늦게 걸린다.
 
-### [ 대용량 로그 최적화 ]
+#### [ 대용량 로그 최적화 ]
 
 /etc/rsyslog.conf - c6g.8xlarge 서버 및 다중 출력을 위한 v8.2 호환 고성능 설정
 
@@ -179,7 +179,7 @@ action(
 ```
 
 
-# /etc/syctl.conf
+#### /etc/syctl.conf
 
 ```
 echo "net.core.rmem_max=67108864" | sudo tee -a /etc/sysctl.conf
